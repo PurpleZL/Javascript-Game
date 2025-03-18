@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Las 7 puertas</title>
+  <link rel="stylesheet" href="./style/scaperoom.css" />
+  <script src="./js/scaperoom.js" defer></script>
+</head>
+
+<body>
+  <main class="escena" id="principal">
+    <div class="señal1" id="señal1" onclick="moverse1()"></div>
+    <div class="portal" id="portalIzq" onclick="camino('izq')"></div>
+    <div class="portal" id="portalDer" onclick="camino('der')"></div>
+    <div class="diablillo" id="diablillo"></div>
+    <div class="respuestas-container" id="respuestasContainer">
+      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie mas</button>
+      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Izq('B')">Espero no oir ni el cuesco ni a Tailor cantar</button>
+      <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Izq('C')">Se oye, es obvio</button>
+    </div>
+  </main>
+  <footer class="mensaje" id="bocadillo">
+    <p id="parrafo1">-Puta vida, he suspendido base de datos y encima se me pierde el perro.</p>
+    <p id="parrafo2">-Joder, ¡¿Enrique donde estás, Eeenriiqueee?!</p>
+  </footer>
+
+</body>
+
+</html>

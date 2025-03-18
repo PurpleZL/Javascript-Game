@@ -1,0 +1,150 @@
+/* Fuente de fontspace.com, sólo para uso personal */
+@font-face {
+  font-family: "ComicKids-WyvKG";
+  src: url("../fonts/ComicKids-WyvKG.otf");
+}
+/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
+.escena, .mensaje {
+  width: 480px;
+  margin: 0;
+}
+
+/*.escena {
+  height: 1000px;
+  width: auto;
+  margin: auto;
+  background-image: url("../img/Escenarios/casaperro.jpg");
+  background-size:cover;
+  position: relative;
+}*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita scroll */
+}
+
+/* La escena ocupa toda la pantalla */
+.escena {
+  height: 100vh; /* 100% de la pantalla */
+  width: 100vw;  /* 100% del ancho de la pantalla */
+  background-image: url("../img/Escenarios/casaperro.jpg");
+  background-size: cover;  /* Asegura que cubra todo */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; 
+  position: relative; /* Necesario para posicionar .mensaje encima */
+}
+
+/* Mensaje encima de la escena */
+.mensaje {
+  font-family: "ComicKids-WyvKG";
+  background-color: white;
+  padding: 10px;
+  position: absolute; /* Se superpone sobre la escena */
+  top: 10px;  /* Ajusta la posición desde la parte superior */
+  left: 50%;  /* Centrado horizontalmente */
+  transform: translateX(-50%);
+  z-index: 10;  /* Asegura que esté sobre la imagen */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.mensaje p {
+  margin-left: 10px;
+}
+
+/* Imagen de la señal luminosa */
+.señal1 {
+  position: absolute;
+  top: 20%;  /* Ajusta la posición vertical */
+  right: 20%;  /* Ajusta la posición horizontal */
+  width: 150px;  /* Ajusta el tamaño de la imagen */
+  height: 350px;
+  background-image: url("../img/Escenarios/señalluminosa.png"); /* Imagen de la señal */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer; /* Indica que es interactivo */
+  z-index: 9;  /* Debajo del mensaje, pero sobre la escena */
+  animation: parpadeo 0.5s infinite alternate; /* Efecto de parpadeo cada medio segudno*/
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+  0%, 50% { opacity: 1; } 
+  100% { opacity: 0.5; }  /* Reduce la opacidad*/
+}
+
+/*Portales*/
+.portal {
+  position: absolute;
+  width: 400px;  
+  height: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none; /* Ocultas al inicio */
+  z-index: 10;
+}
+
+/* Posiciones de las puertas */
+#portalIzq { top: 17.5%; left: 19%; background-image: url("../img/Escenarios/portal.png"); }
+#portalDer { top: 17.5%; right: 17%; background-image: url("../img/Escenarios/portal.png"); }
+
+/*Diablillo Añañin*/
+.diablillo {
+  position: absolute;
+  width: 200px;  
+  height: 1000px;
+  top: 60%; left: 85%; 
+  background-image: url("../img/Personajes/demonilloañañin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: none; /* Ocultas al inicio */
+  z-index: 10;
+}
+
+/* Estilos para el contenedor de respuestas */
+.respuestas-container {
+  position: relative; /* Contenedor relativo para posicionar los botones de manera absoluta */
+  width: 100%;
+  height: 100%;
+  display: none; /* Oculto por defecto */
+}
+
+/* Estilos base para los botones de respuesta */
+.respuesta {
+  position: absolute; /* Posicionamiento absoluto */
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.respuesta:hover {
+  background-color: royalblue;
+}
+
+/* Posiciones individuales para cada botón */
+#respuestaA {
+  top: 40%; /* Posición vertical */
+  left: 10%; /* Posición horizontal */
+}
+
+#respuestaB {
+  top: 40%; /* Posición vertical */
+  left: 53%; /* Posición horizontal */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+}
+
+#respuestaC {
+  top: 40%; /* Posición vertical */
+  right: 10%; /* Posición horizontal */
+}
+
+
+
