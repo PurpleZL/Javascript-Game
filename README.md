@@ -1,3 +1,7 @@
+Tutorial para usar Git y Github en Visual Studio (Descarga Git primero):
+https://www.youtube.com/watch?v=qdec2M4NwT0
+Tened cuidado con los comits para que no joda codigo
+
 Puntos de Control:
 
 Jueves-Tener las 6 Preguntas interactivas
