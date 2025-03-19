@@ -53,7 +53,7 @@ html, body {
   right: 20%;  /* Ajusta la posición horizontal */
   width: 150px;  /* Ajusta el tamaño de la imagen */
   height: 350px;
-  background-image: url("../img/Escenarios/señalluminosa.png"); /* Imagen de la señal */
+  background-image: url("../img/Escenarios/señal.png"); /* Imagen de la señal */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
