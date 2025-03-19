@@ -9,15 +9,6 @@
   margin: 0;
 }
 
-/*.escena {
-  height: 1000px;
-  width: auto;
-  margin: auto;
-  background-image: url("../img/Escenarios/casaperro.jpg");
-  background-size:cover;
-  position: relative;
-}*/
-
 html, body {
   margin: 0;
   padding: 0;
@@ -52,6 +43,7 @@ html, body {
 }
 .mensaje p {
   margin-left: 10px;
+  font-size: 24px;
 }
 
 /* Imagen de la señal luminosa */
@@ -123,6 +115,7 @@ html, body {
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
+  font-size: 24px;
 }
 
 .respuesta:hover {
@@ -132,7 +125,7 @@ html, body {
 /* Posiciones individuales para cada botón */
 #respuestaA {
   top: 40%; /* Posición vertical */
-  left: 10%; /* Posición horizontal */
+  left: 5%; /* Posición horizontal */
 }
 
 #respuestaB {
@@ -143,8 +136,53 @@ html, body {
 
 #respuestaC {
   top: 40%; /* Posición vertical */
-  right: 10%; /* Posición horizontal */
+  right: 5%; /* Posición horizontal */
 }
 
+.troll {
+  position: absolute;
+  width: 400px;  
+  height: 1000px;
+  top: 20%; left: 40%; 
+  background-image: url("../img/Personajes/troll.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+}
 
+/*Censura de los wokes*/
+.censure {
+  position: absolute;
+  width: 100px;  
+  height: 1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer; /*Tiene funcionalidad sorpresa*/ 
+  display: none; /* Ocultas al inicio */
+  z-index: 10;
+}
 
+/* Posiciones de las censuras */
+#censure1 { top: 44%; left: 43%; background-image: url("../img/Personajes/censured.png"); }
+#censure2 { top: 44%; right: 43%; background-image: url("../img/Personajes/censured.png"); }
+#censure3 { top: 65%; right: 47.5%; background-image: url("../img/Personajes/censured.png"); }
+
+/*Boton de reinicio*/
+#reiniciar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none; /* Ocultas al inicio */
+}
+
+#reiniciar:hover {
+  background-color: darkred;
+}
