@@ -9,3 +9,5 @@ Jueves-Tener las 6 Preguntas interactivas
 Viernes-Tener los escenarios de muerte de las preguntas + escenario final
 
 Sabado/Domingo-Limar codigo
+
+Ojo: Las caracteristicas visuales del codigo (css) varia dependiendo del monitor y el browser utilizado
