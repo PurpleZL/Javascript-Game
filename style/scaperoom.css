@@ -186,3 +186,27 @@ html, body {
 #reiniciar:hover {
   background-color: darkred;
 }
+
+.dam1 {
+  position: absolute;
+  width: 400px;  
+  height: 1000px;
+  top: 20%; left: 40%; 
+  background-image: url("../img/Personajes/dam1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+}
+
+.dam2 {
+  position: absolute;
+  width: 400px;  
+  height: 1000px;
+  top: 20%; left: 40%; 
+  background-image: url("../img/Personajes/dam2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+}

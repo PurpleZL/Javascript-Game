@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Las 7 puertas</title>
+  <title>Buscando a Enrique</title>
   <link rel="stylesheet" href="./style/scaperoom.css" />
   <script src="./js/scaperoom.js" defer></script>
 </head>
@@ -12,8 +12,8 @@
 <body>
   <main class="escena" id="principal">
     <div class="señal1" id="señal1" onclick="moverse1()"></div>
-    <div class="portal" id="portalIzq" onclick="camino('izq')"></div>
-    <div class="portal" id="portalDer" onclick="camino('der')"></div>
+    <div class="portal" id="portalIzq" onclick="camino1('izq')"></div>
+    <div class="portal" id="portalDer" onclick="camino1('der')"></div>
     <div class="diablillo" id="diablillo"></div>
     <div class="respuestas-container" id="respuestasContainer">
       <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie mas</button>
@@ -25,6 +25,10 @@
     <div class="censure" id="censure2" onclick="pervertido()"></div>
     <div class="censure" id="censure3" onclick="pervertido()"></div>
     <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar Partida</button>
+    <div class="portal" id="portalIzq" onclick="camino2('izq')"></div>
+    <div class="portal" id="portalDer" onclick="camino2('der')"></div>
+    <div class="dam1" id="dam1"></div>
+    <div class="dam2" id="dam2"></div>
 
   </main>
   <footer class="mensaje" id="bocadillo">
