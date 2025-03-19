@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +7,48 @@
   <link rel="stylesheet" href="./style/scaperoom.css" />
   <script src="./js/scaperoom.js" defer></script>
 </head>
-
 <body>
+  <!-- Escena principal del juego -->
   <main class="escena" id="principal">
+    <!-- Señal interactiva -->
     <div class="señal1" id="señal1" onclick="moverse1()"></div>
+
+    <!-- Portales -->
     <div class="portal" id="portalIzq" onclick="camino1('izq')"></div>
     <div class="portal" id="portalDer" onclick="camino1('der')"></div>
+
+    <!-- Diablillo Añañin -->
     <div class="diablillo" id="diablillo"></div>
+
+    <!-- Contenedor de respuestas -->
     <div class="respuestas-container" id="respuestasContainer">
-      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie mas</button>
-      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Izq('B')">Espero no oir ni el cuesco ni a Tailor cantar</button>
+      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie más</button>
+      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Izq('B')">Espero no oír ni el cuesco ni a Taylor cantar</button>
       <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Izq('C')">Se oye, es obvio</button>
     </div>
+
+    <!-- Troll y censuras -->
     <div class="troll" id="troll"></div>
     <div class="censure" id="censure1" onclick="pervertido()"></div>
     <div class="censure" id="censure2" onclick="pervertido()"></div>
     <div class="censure" id="censure3" onclick="pervertido()"></div>
+
+    <!-- Botón de reinicio -->
     <button id="reiniciar" onclick="reiniciarJuego()">Reiniciar Partida</button>
+
+    <!-- Portales adicionales -->
     <div class="portal" id="portalIzq" onclick="camino2('izq')"></div>
     <div class="portal" id="portalDer" onclick="camino2('der')"></div>
+
+    <!-- Personajes adicionales -->
     <div class="dam1" id="dam1"></div>
     <div class="dam2" id="dam2"></div>
-
   </main>
+
+  <!-- Mensajes del juego -->
   <footer class="mensaje" id="bocadillo">
     <p id="parrafo1">-Puta vida, he suspendido base de datos y encima se me pierde el perro.</p>
-    <p id="parrafo2">-Joder, ¡¿Enrique donde estás, Eeenriiqueee?!</p>
+    <p id="parrafo2">-Joder, ¡¿Enrique dónde estás, Eeenriiqueee?!</p>
   </footer>
-
 </body>
-
 </html>

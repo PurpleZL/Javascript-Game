@@ -1,114 +1,139 @@
-/* Fuente de fontspace.com, sólo para uso personal */
+/* =============================================
+   FUENTES Y ESTILOS GENERALES
+   ============================================= */
 @font-face {
   font-family: "ComicKids-WyvKG";
   src: url("../fonts/ComicKids-WyvKG.otf");
 }
-/* FIJAMOS el ancho y la posición de la escena y de los mensajes */
-.escena, .mensaje {
-  width: 480px;
-  margin: 0;
-}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Evita scroll */
+  overflow: hidden;
 }
 
-/* La escena ocupa toda la pantalla */
+.escena,
+.mensaje {
+  width: 480px;
+  margin: 0;
+}
+
+/* =============================================
+     ESCENA PRINCIPAL
+     ============================================= */
 .escena {
-  height: 100vh; /* 100% de la pantalla */
-  width: 100vw;  /* 100% del ancho de la pantalla */
+  height: 100vh;
+  width: 100vw;
   background-image: url("../img/Escenarios/casaperro.jpg");
-  background-size: cover;  /* Asegura que cubra todo */
-  background-position: center;  /* Centrada */
-  background-repeat: no-repeat; 
-  position: relative; /* Necesario para posicionar .mensaje encima */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-/* Mensaje encima de la escena */
+/* =============================================
+     MENSAJES DEL JUEGO
+     ============================================= */
 .mensaje {
   font-family: "ComicKids-WyvKG";
   background-color: white;
   padding: 10px;
-  position: absolute; /* Se superpone sobre la escena */
-  top: 10px;  /* Ajusta la posición desde la parte superior */
-  left: 50%;  /* Centrado horizontalmente */
+  position: absolute;
+  top: 10px;
+  left: 50%;
   transform: translateX(-50%);
-  z-index: 10;  /* Asegura que esté sobre la imagen */
+  z-index: 10;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .mensaje p {
   margin-left: 10px;
   font-size: 24px;
 }
 
-/* Imagen de la señal luminosa */
+/* =============================================
+     ELEMENTOS INTERACTIVOS
+     ============================================= */
 .señal1 {
   position: absolute;
-  top: 20%;  /* Ajusta la posición vertical */
-  right: 20%;  /* Ajusta la posición horizontal */
-  width: 150px;  /* Ajusta el tamaño de la imagen */
+  top: 20%;
+  right: 20%;
+  width: 150px;
   height: 350px;
-  background-image: url("../img/Escenarios/señal.png"); /* Imagen de la señal */
+  background-image: url("../img/Escenarios/señal.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  cursor: pointer; /* Indica que es interactivo */
-  z-index: 9;  /* Debajo del mensaje, pero sobre la escena */
-  animation: parpadeo 0.5s infinite alternate; /* Efecto de parpadeo cada medio segudno*/
+  cursor: pointer;
+  z-index: 9;
+  animation: parpadeo 0.5s infinite alternate;
 }
 
-/* Animación de parpadeo */
 @keyframes parpadeo {
-  0%, 50% { opacity: 1; } 
-  100% { opacity: 0.5; }  /* Reduce la opacidad*/
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
 }
 
-/*Portales*/
 .portal {
   position: absolute;
-  width: 400px;  
+  width: 400px;
   height: 1000px;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  display: none; /* Ocultas al inicio */
+  display: none;
   z-index: 10;
 }
 
-/* Posiciones de las puertas */
-#portalIzq { top: 17.5%; left: 19%; background-image: url("../img/Escenarios/portal.png"); }
-#portalDer { top: 17.5%; right: 17%; background-image: url("../img/Escenarios/portal.png"); }
+#portalIzq {
+  top: 17.5%;
+  left: 19%;
+  background-image: url("../img/Escenarios/portal.png");
+}
 
-/*Diablillo Añañin*/
+#portalDer {
+  top: 17.5%;
+  right: 17%;
+  background-image: url("../img/Escenarios/portal.png");
+}
+
 .diablillo {
   position: absolute;
-  width: 200px;  
+  width: 200px;
   height: 1000px;
-  top: 60%; left: 85%; 
+  top: 60%;
+  left: 85%;
   background-image: url("../img/Personajes/demonilloañañin.png");
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  display: none; /* Ocultas al inicio */
+  display: none;
   z-index: 10;
 }
 
-/* Estilos para el contenedor de respuestas */
+/* =============================================
+     RESPUESTAS Y BOTONES
+     ============================================= */
 .respuestas-container {
-  position: relative; /* Contenedor relativo para posicionar los botones de manera absoluta */
+  position: relative;
   width: 100%;
   height: 100%;
-  display: none; /* Oculto por defecto */
+  display: none;
 }
 
-/* Estilos base para los botones de respuesta */
 .respuesta {
-  position: absolute; /* Posicionamiento absoluto */
+  position: absolute;
   padding: 10px 20px;
   background-color: lightblue;
   border: none;
@@ -122,28 +147,31 @@ html, body {
   background-color: royalblue;
 }
 
-/* Posiciones individuales para cada botón */
 #respuestaA {
-  top: 40%; /* Posición vertical */
-  left: 5%; /* Posición horizontal */
+  top: 40%;
+  left: 5%;
 }
 
 #respuestaB {
-  top: 40%; /* Posición vertical */
-  left: 53%; /* Posición horizontal */
-  transform: translateX(-50%); /* Centrar horizontalmente */
+  top: 40%;
+  left: 53%;
+  transform: translateX(-50%);
 }
 
 #respuestaC {
-  top: 40%; /* Posición vertical */
-  right: 5%; /* Posición horizontal */
+  top: 40%;
+  right: 5%;
 }
 
+/* =============================================
+     TROLL Y CENSURAS
+     ============================================= */
 .troll {
   position: absolute;
-  width: 400px;  
+  width: 400px;
   height: 1000px;
-  top: 20%; left: 40%; 
+  top: 20%;
+  left: 40%;
   background-image: url("../img/Personajes/troll.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -151,24 +179,38 @@ html, body {
   z-index: 10;
 }
 
-/*Censura de los wokes*/
 .censure {
   position: absolute;
-  width: 100px;  
+  width: 100px;
   height: 1000px;
   background-size: contain;
   background-repeat: no-repeat;
-  cursor: pointer; /*Tiene funcionalidad sorpresa*/ 
-  display: none; /* Ocultas al inicio */
+  cursor: pointer;
+  display: none;
   z-index: 10;
 }
 
-/* Posiciones de las censuras */
-#censure1 { top: 44%; left: 43%; background-image: url("../img/Personajes/censured.png"); }
-#censure2 { top: 44%; right: 43%; background-image: url("../img/Personajes/censured.png"); }
-#censure3 { top: 65%; right: 47.5%; background-image: url("../img/Personajes/censured.png"); }
+#censure1 {
+  top: 44%;
+  left: 43%;
+  background-image: url("../img/Personajes/censured.png");
+}
 
-/*Boton de reinicio*/
+#censure2 {
+  top: 44%;
+  right: 43%;
+  background-image: url("../img/Personajes/censured.png");
+}
+
+#censure3 {
+  top: 65%;
+  right: 47.5%;
+  background-image: url("../img/Personajes/censured.png");
+}
+
+/* =============================================
+     BOTÓN DE REINICIO
+     ============================================= */
 #reiniciar {
   position: fixed;
   bottom: 20px;
@@ -180,33 +222,33 @@ html, body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  display: none; /* Ocultas al inicio */
+  display: none;
 }
 
 #reiniciar:hover {
   background-color: darkred;
 }
 
-.dam1 {
+/* =============================================
+     PERSONAJES ADICIONALES
+     ============================================= */
+.dam1,
+.dam2 {
   position: absolute;
-  width: 400px;  
+  width: 400px;
   height: 1000px;
-  top: 20%; left: 40%; 
-  background-image: url("../img/Personajes/dam1.png");
+  top: 20%;
+  left: 40%;
   background-size: contain;
   background-repeat: no-repeat;
   display: none;
   z-index: 10;
 }
 
+.dam1 {
+  background-image: url("../img/Personajes/dam1.png");
+}
+
 .dam2 {
-  position: absolute;
-  width: 400px;  
-  height: 1000px;
-  top: 20%; left: 40%; 
   background-image: url("../img/Personajes/dam2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
 }
