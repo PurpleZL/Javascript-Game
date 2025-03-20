@@ -10,6 +10,7 @@ Viernes-Tener los escenarios de muerte de las preguntas + escenario final
 
 Sabado/Domingo-Limar codigo
 
+Alejandro:
 Las preguntas 2 y 4, tienen un formato diferente, constan de 3 respuestas
 2 buenas dependinedo cual elija el jugador le llevara a un camino u otro,
 y 1 que lleva a la muerte
@@ -18,3 +19,4 @@ Las imagenes se sacan de leonardo.ia usando los modelos: Concept Art y Anime pri
 Los tamaños son: 16:9 para escenas y personalizado 9:16 para personajes (activa Transparency)
 
 Ojo: Las caracteristicas visuales del codigo (css) varia dependiendo del monitor y el browser utilizado
+Intentaremos usar porcentajes
