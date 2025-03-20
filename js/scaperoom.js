@@ -59,7 +59,7 @@ function camino1(direccion) {
 
     // Actualizar los mensajes
     document.getElementById("parrafo1").innerHTML = "Pregunta 1";
-    document.getElementById("parrafo2").innerHTML = "Añañin: Si una mujer con burca te pregunta que dia es y tu respondes 11 de marzo de 2004, ¿Que va a pasar?";
+    document.getElementById("parrafo2").innerHTML = "Añañin: Si una persona con una mochila sospechosa te pregunta que dia es y tu respondes 11 de marzo de 2004, ¿Que va a pasar?";
 
     // Ocultar portales
     document.getElementById("portalIzq").style.display = "none";
