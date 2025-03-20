@@ -50,7 +50,24 @@ function camino1(direccion) {
     // Mostrar el contenedor de respuestas
     document.getElementById("respuestasContainer").style.display = "flex";
   }
-  // else if (direccion === "der") { ... }
+   else if (direccion === "der") { 
+    // Cambiar la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+
+    // Ocultar la señal
+    document.getElementById("señal1").style.display = "none";
+
+    // Actualizar los mensajes
+    document.getElementById("parrafo1").innerHTML = "Pregunta 1";
+    document.getElementById("parrafo2").innerHTML = "Añañin: Si una mujer con burca te pregunta que dia es y tu respondes 11 de marzo de 2004, ¿Que va a pasar?";
+
+    // Ocultar portales
+    document.getElementById("portalIzq").style.display = "none";
+    document.getElementById("portalDer").style.display = "none";
+
+    // Mostrar el contenedor de respuestas
+    document.getElementById("respuestasContainer").style.display = "flex";
+   }
 }
 
 /**
@@ -58,6 +75,27 @@ function camino1(direccion) {
  * @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
  */
 function mostrarRespuesta1Izq(respuesta) {
+  if (respuesta !== "A") {
+    // Cambiar la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/montañasombria.jpg")';
+
+    // Actualizar los mensajes
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: La troll te mira indignada y con ojos de desquiciada, sabes que tu respuesta no le ha gustado.";
+    document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: En tus últimos segundos de vida ves como se dirige hacia ti corriendo, es el fin... Mueres";
+
+    // Mostrar troll, censuras y botón de reinicio
+    document.getElementById("troll").style.display = "block";
+    document.getElementById("censure1").style.display = "block";
+    document.getElementById("censure2").style.display = "block";
+    document.getElementById("censure3").style.display = "block";
+    document.getElementById("reiniciar").style.display = "block";
+
+    // Ocultar diablillo y contenedor de respuestas
+    document.getElementById("diablillo").style.display = "none";
+    document.getElementById("respuestasContainer").style.display = "none";
+  }
+}
+function mostrarRespuesta1Dere(respuesta) {
   if (respuesta !== "A") {
     // Cambiar la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/montañasombria.jpg")';
