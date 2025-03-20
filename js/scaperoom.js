@@ -97,23 +97,8 @@ function mostrarRespuesta1Izq(respuesta) {
 }
 function mostrarRespuesta1Dere(respuesta) {
   if (respuesta !== "A") {
-    // Cambiar la imagen de fondo
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/montañasombria.jpg")';
+   
 
-    // Actualizar los mensajes
-    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: La troll te mira indignada y con ojos de desquiciada, sabes que tu respuesta no le ha gustado.";
-    document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: En tus últimos segundos de vida ves como se dirige hacia ti corriendo, es el fin... Mueres";
-
-    // Mostrar troll, censuras y botón de reinicio
-    document.getElementById("troll").style.display = "block";
-    document.getElementById("censure1").style.display = "block";
-    document.getElementById("censure2").style.display = "block";
-    document.getElementById("censure3").style.display = "block";
-    document.getElementById("reiniciar").style.display = "block";
-
-    // Ocultar diablillo y contenedor de respuestas
-    document.getElementById("diablillo").style.display = "none";
-    document.getElementById("respuestasContainer").style.display = "none";
   }
 }
 
