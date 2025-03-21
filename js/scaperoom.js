@@ -66,7 +66,7 @@ function camino1(direccion) {
     document.getElementById("portalDer").style.display = "none";
 
     // Mostrar el contenedor de respuestas
-    document.getElementById("respuestasContainer").style.display = "flex";
+    document.getElementById("respuestasContainerDer").style.display = "flex";
    }
 }
 
@@ -96,9 +96,17 @@ function mostrarRespuesta1Izq(respuesta) {
   }
 }
 function mostrarRespuesta1Dere(respuesta) {
-  if (respuesta !== "A") {
-   
-
+  if (respuesta == "C") {
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una pelicula";
+    document.getElementById("parrafo2").innerHTML = "La mochila explota y mueres";
+    document.getElementById("reiniciar").style.display = "block";
+  }
+  if (respuesta == "A") {
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atencion en historia......Se nota";
+    document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: El vagon en el que ivas explota y evidentemente mueres, bien hecho campeon";
+    document.getElementById("reiniciar").style.display = "block";
   }
 }
 
