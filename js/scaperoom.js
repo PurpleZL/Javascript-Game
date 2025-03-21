@@ -96,19 +96,24 @@ function mostrarRespuesta1Izq(respuesta) {
   }
 }
 function mostrarRespuesta1Dere(respuesta) {
-  if (respuesta == "C") {
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
-    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una pelicula";
+  // Cambia la imagen de fondo
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
+
+  // Mensajes según la respuesta
+  if (respuesta === "C") {
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una película";
     document.getElementById("parrafo2").innerHTML = "La mochila explota y mueres";
-    document.getElementById("reiniciar").style.display = "block";
+  } else if (respuesta === "A") {
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atención en historia... Se nota";
+    document.getElementById("parrafo2").innerHTML = "El vagón en el que ibas explota y evidentemente mueres, bien hecho campeón";
   }
-  if (respuesta == "A") {
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
-    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atencion en historia......Se nota";
-    document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: El vagon en el que ivas explota y evidentemente mueres, bien hecho campeon";
-    document.getElementById("reiniciar").style.display = "block";
-  }
+
+  // Mostrar botón de reinicio y ocultar lo que no necesitas
+  document.getElementById("reiniciar").style.display = "block";
+  document.getElementById("diablillo").style.display = "none";
+  document.getElementById("respuestasContainerDer").style.display = "none";
 }
+
 
 /**
  * Función divertida que se ejecuta al hacer clic en las censuras.
