@@ -20,7 +20,49 @@ body {
   width: 480px;
   margin: 0;
 }
+/* =============================================
+     Disclaimer
+     ============================================= */
+.disclaimer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+}
 
+.disclaimer-content {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  max-width: 80%;
+}
+
+.disclaimer-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#continuar {
+  background-color: red; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#continuar:hover {
+  background-color: blueviolet; 
+}
 /* =============================================
      ESCENA PRINCIPAL
      ============================================= */
@@ -36,7 +78,7 @@ body {
 
 /* =============================================
      MENSAJES DEL JUEGO
-     ============================================= */
+   ============================================= */
 .mensaje {
   font-family: "ComicKids-WyvKG";
   background-color: white;
@@ -231,7 +273,7 @@ body {
 
 /* =============================================
      PERSONAJES ADICIONALES
-     ============================================= */
+  ============================================= */
 .dam1,
 .dam2 {
   position: absolute;

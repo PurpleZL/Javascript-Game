@@ -8,6 +8,15 @@
   <script src="./js/scaperoom.js" defer></script>
 </head>
 <body>
+
+  <!-- Disclaimer inicial -->
+  <div class="disclaimer" id="disclaimer">
+    <div class="disclaimer-content">
+      <p>Los temas que se tratan en este juego son pura ficción y humor. Cualquier similitud con la realidad es pura coincidencia.</p>
+      <button id="continuar" onclick="iniciarJuego()">Continuar</button>
+    </div>
+  </div>
+  
   <!-- Escena principal del juego -->
   <main class="escena" id="principal">
     <!-- Señal interactiva -->
@@ -45,8 +54,8 @@
     <div class="dam2" id="dam2"></div>
       <!-- Contenedor de respuestas derecha-->
       <div class="respuestas-container" id="respuestasContainerDer">
-        <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Dere('A')">Nada es un dia completamente normal</button>
-        <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Dere('B')">El extraño resulta ser Mr.Beast y te da 200.000€</button>
+        <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Dere('A')">El extraño resulta ser Mr.Beast y te da 200.000€</button>
+        <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Dere('B')">Nada es un dia completamente normal</button>
         <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Dere('C')">Desactivaras la mochila con el poder del guion</button>
       </div>
   </main>

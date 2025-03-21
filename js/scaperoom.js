@@ -3,6 +3,18 @@
 // =============================================
 
 /**
+ * Función para iniciar el juego después de aceptar el disclaimer.
+ */
+function iniciarJuego() {
+  // Ocultar el disclaimer
+  document.getElementById("disclaimer").style.display = "none";
+
+  // Mostrar la escena principal del juego
+  document.getElementById("principal").style.display = "block";
+  document.getElementById("bocadillo").style.display = "block";
+}
+
+/**
  * Función que se ejecuta al hacer clic en la señal.
  * Cambia la escena y muestra los portales y el diablillo.
  */
@@ -49,8 +61,7 @@ function camino1(direccion) {
 
     // Mostrar el contenedor de respuestas
     document.getElementById("respuestasContainer").style.display = "flex";
-  }
-   else if (direccion === "der") { 
+  }else if (direccion === "der") { 
     // Cambiar la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
 
@@ -93,20 +104,22 @@ function mostrarRespuesta1Izq(respuesta) {
     // Ocultar diablillo y contenedor de respuestas
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
-  }
+  }//else{} union con la pregunta central 2
 }
-function mostrarRespuesta1Dere(respuesta) {
-  // Cambia la imagen de fondo
-  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
 
+function mostrarRespuesta1Dere(respuesta) {
   // Mensajes según la respuesta
   if (respuesta === "C") {
+    // Cambia la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una película";
     document.getElementById("parrafo2").innerHTML = "La mochila explota y mueres";
-  } else if (respuesta === "A") {
+  } else if (respuesta === "B") {
+    // Cambia la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atención en historia... Se nota";
     document.getElementById("parrafo2").innerHTML = "El vagón en el que ibas explota y evidentemente mueres, bien hecho campeón";
-  }
+  }//else{} union con la pregunta central 2
 
   // Mostrar botón de reinicio y ocultar lo que no necesitas
   document.getElementById("reiniciar").style.display = "block";
