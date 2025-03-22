@@ -118,22 +118,23 @@ function mostrarRespuesta1Dere(respuesta) {
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una película";
     document.getElementById("parrafo2").innerHTML = "La mochila explota y mueres";
+    document.getElementById("reiniciar").style.display = "block";
+    document.getElementById("diablillo").style.display = "none";
+    document.getElementById("respuestasContainerDer").style.display = "none";
   } else if (respuesta === "B") {
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atención en historia... Se nota";
     document.getElementById("parrafo2").innerHTML = "El vagón en el que ibas explota y evidentemente mueres, bien hecho campeón";
+    document.getElementById("reiniciar").style.display = "block";
+    document.getElementById("diablillo").style.display = "none";
+    document.getElementById("respuestasContainerDer").style.display = "none";
   } else {
+    // Mostrar botón de reinicio y ocultar lo que no necesitas
     document.getElementById("reiniciar").style.display = "none";
-    mostrarCentralP2
-  ();
-
+    document.getElementById("respuestasContainerDer").style.display = "none";
+    mostrarCentralP2();
   }
-
-  // Mostrar botón de reinicio y ocultar lo que no necesitas
-  document.getElementById("reiniciar").style.display = "block";
-  document.getElementById("diablillo").style.display = "none";
-  document.getElementById("respuestasContainerDer").style.display = "none";
 }
 
 
@@ -236,14 +237,11 @@ function mostrarCentralP2() {
   // Cambiar la imagen de fondo
   document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
 
-  // Ocultar la señal
-  document.getElementById("señal1").style.display = "none";
   document.getElementById("reiniciar").style.display = "none";
 
   // Actualizar los mensajes
-  document.getElementById("parrafo1").innerHTML = "Pregunta 3";
+  document.getElementById("parrafo1").innerHTML = "Pregunta 2";
   document.getElementById("parrafo2").innerHTML = "Añañin: Cuantos gays se nesesitan para cambiar una bombilla? ";
-
 
   // Mostrar el contenedor de respuestas
   document.getElementById("respuestasContainerCentralP2").style.display = "flex";
