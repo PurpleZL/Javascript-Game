@@ -218,7 +218,6 @@ function mostrarRespuesta3Izq(respuesta) {
     document.getElementById("respuestasContainer").style.display = "none";
   }else {
     document.getElementById("respuestasContainer").style.display = "none";
-
     mostrarCentralP4()
   }
 }
@@ -272,37 +271,37 @@ function mostrarRespuestaCentralP2(respuesta) {
 
 function mostrarCentralP4() {
   // Cambiar la imagen de fondo
-  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
-
-  // Ocultar la señal
-  document.getElementById("señal1").style.display = "none";
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/2 puertas.jpg")';
 
   // Actualizar los mensajes
   document.getElementById("parrafo1").innerHTML = "Final";
-  document.getElementById("parrafo2").innerHTML = "Añañin: Raul es el mejor profesor  ";
+  document.getElementById("parrafo2").innerHTML = "Añañin: ¿Raúl apoya a Perro Sanche?";
 
-
-  // Mostrar el contenedor de respuestas
+  // Mostrar el contenedor de respuestas y ocultar reinicio
   document.getElementById("respuestasContainerCentralP4").style.display = "flex";
   document.getElementById("reiniciar").style.display = "none";
 
 }
 
 /**
- * Función que maneja la respuesta del usuario a la pregunta 3.
- * @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
+ * Función que maneja la respuesta del usuario a la pregunta 4.
+ * @param {string} respuesta - La respuesta elegida ("A" o "B").
  */
 
 function mostrarRespuestaCentralP4(respuesta) {
   
-  if (respuesta === "B") { //muerte
+  if (respuesta === "A") { //muerte
     // Cambia la imagen de fondo
-
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
-    document.getElementById("parrafo1").innerHTML = "Añañin: Ahora estaras en el infierno eternamente por decir que si";
+    document.getElementById("parrafo1").innerHTML = "Añañin: Ahora estaras en el infierno socialista eternamente";
     document.getElementById("parrafo2").style.display = "none";
     document.getElementById("reiniciar").style.display = "block";
-  } else if (respuesta === "A") { //final feliz
+    // Mover al diablillo a una nueva posición
+    let diablillo = document.getElementById("diablillo");
+    diablillo.style.position = "absolute"; 
+    diablillo.style.top = "60%"; 
+    diablillo.style.left = "80%"; 
+  } else if (respuesta === "B") { //final feliz
     // la funcion de laura
 
   }
