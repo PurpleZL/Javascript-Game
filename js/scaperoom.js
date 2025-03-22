@@ -143,7 +143,6 @@ function mostrarRespuesta1Dere(respuesta) {
    
   }
 }
-
 /** funcion para cortar cables */
 function cortarCable(color) {
   color = color.toLowerCase();  // Convierte todo a minúsculas
@@ -162,6 +161,9 @@ function cortarCable(color) {
 
   // Ocultar contenedor de cables y mostrar reinicio
   document.getElementById("cablesContainer").style.display = "none";
+  // Ocultar diablillo
+  document.getElementById("diablillo").style.display = "none";
+  
   
 }
 
@@ -180,6 +182,68 @@ function pervertido() {
 function reiniciarJuego() {
   location.reload(); // Recarga la página para reiniciar el juego
 }
+// =============================================
+// FUNCIONES ADICIONALES (CAMINO 2 DERECHA)
+// =============================================
+/**
+ * Función que maneja la elección de camino en la segunda fase.
+ * @param {string} direccion - La dirección elegida ("izq" o "der").
+ */
+function pregunta3Izq() {
+ // Cambiar la imagen de fondo
+ document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+ // Actualizar los mensajes
+ document.getElementById("parrafo1").innerHTML = "Pregunta 3";
+ document.getElementById("parrafo2").innerHTML =
+   '<span style="font-size: 24px;">Añañin: Estas enfrente de dos troles, uno siempre dice la verdad y el otro siempre miente. ' +
+    'Tienes 1 pregunta para descubrir cual es la puerta que te llevara a Enrique </span>'; 
+
+ // Ocultar portales
+ document.getElementById("portalIzq").style.display = "none";
+ document.getElementById("portalDer").style.display = "none";
+
+ // Modificar las respuestas
+ document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro por la puerta de la izquierda";
+ document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y les tiro la mochila bomba";
+ document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de los 2 porque puerta deberias pasar y escojes la contraria"; // Correcta.me lo dijo el abc
+
+ // Asignar nuevas funciones a los botones de respuesta
+ document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Dere('A'); };
+ document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Dere('B'); };
+ document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Dere('C'); };
+
+ // Mostrar el contenedor de respuestas y al diablillo
+ document.getElementById("diablillo").style.display = "block";
+ document.getElementById("respuestasContainer").style.display = "flex";
+}
+ /**
+ * Función que maneja la respuesta del usuario a la pregunta 3.
+ * @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
+ */
+function mostrarRespuesta3Dere(respuesta) {
+  if (respuesta !== "C") {
+    // Cambiar la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/ciudadgato.jpg")';
+
+    // Actualizar los mensajes
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Te encuentras en una pequeña ciudad llena de gatitos";
+    document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: El lider se acerca y te pregunta como has llegado hasta allí, le respondes que has pasado por la puerta de la derecha y te dice que te ayudaran a buscar a tu perro,es mentira te esclavizan,ya no puedes buscar a Enrique";
+    
+
+    // Mostrar bruja, estudiantes, gnomo y botón de reinicio
+    document.getElementById("reiniciar").style.display = "block";
+    document.getElementById("lidergatorrecorte").style.display = "block";
+
+    // Ocultar diablillo y contenedor de respuestas
+    document.getElementById("diablillo").style.display = "none";
+    document.getElementById("respuestasContainer").style.display = "none";
+  }else {
+    document.getElementById("respuestasContainer").style.display = "none";
+    mostrarCentralP4()
+  }
+}
+
+
 
 // =============================================
 // FUNCIONES ADICIONALES (CAMINO 2)
