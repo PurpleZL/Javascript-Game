@@ -227,8 +227,10 @@ function pregunta3Dere() {
  */
 function mostrarRespuesta3Dere(respuesta) {
   if (respuesta !== "C") {
+    document.getElementById("diablillo").style.display = "none";
+    document.getElementById("respuestasContainer").style.display = "none";
     document.getElementById("respuestasContainerDer").style.display = "none";
-    pregunta3Dere(); // Llama a la función para mostrar la pregunta 3
+    // Llama a la función para mostrar la pregunta 3
     // Cambiar la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/ciudadgato.jpg")';
 
@@ -242,8 +244,7 @@ function mostrarRespuesta3Dere(respuesta) {
     document.getElementById("lidergatorrecorte").style.display = "block";
 
     // Ocultar diablillo y contenedor de respuestas
-    document.getElementById("diablillo").style.display = "none";
-    document.getElementById("respuestasContainer").style.display = "none";
+   
   }else {
     document.getElementById("respuestasContainer").style.display = "none";
     mostrarCentralP4()
@@ -350,7 +351,8 @@ function mostrarRespuestaCentralP2(respuesta) {
   document.getElementById("diablillo").style.display = "none";
   if (respuesta === "A") {
     // Cambia la imagen de fondo
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/")';
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/villa2.jpg")';
+    document.getElementById("diablo").style.display = "block";
     document.getElementById("parrafo1").innerHTML = " ";
     document.getElementById("parrafo2").style.display = "none";
     document.getElementById("reiniciar").style.display = "block";
