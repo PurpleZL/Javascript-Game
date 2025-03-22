@@ -321,11 +321,13 @@ body {
   z-index: 10;
   cursor: pointer;
 }
-
 .bruja {
   background-image: url("../img/Personajes/bruja.png");
 }
+.lidergatorrecorte{
+  background-image: url("../img/Personajes/lidergatorrecorte.png");
 
+  }
 .gnomo {
   position: absolute;
   width: 400px;
