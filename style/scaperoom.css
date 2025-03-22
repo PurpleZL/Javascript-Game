@@ -341,3 +341,24 @@ body {
 .gnomo {
   background-image: url("../img/Personajes/gnomo.png");
 }
+
+#cablesContainer {
+  display: none;  /* Oculto por defecto */
+  position: absolute; /* Se posiciona en la pantalla */
+  top: 50%;  /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta la posición exacta */
+  
+  display: flex;
+  flex-direction: row;  /* Coloca los botones en línea horizontal */
+  align-items: center;  /* Centra los botones en la misma línea */
+  justify-content: center; /* Asegura que estén centrados horizontalmente */
+  gap: 20px; /* Espacio entre botones */
+}
+
+/* Ajustes para los botones */
+#cablesContainer .respuesta {
+  position: static; /* Flexbox maneja la posición */
+  width: 200px; /* Ajusta el ancho de los botones */
+  text-align: center;
+}
