@@ -61,7 +61,7 @@ function camino1(direccion) {
 
     // Mostrar el contenedor de respuestas
     document.getElementById("respuestasContainer").style.display = "flex";
-  }else if (direccion === "der") { 
+  } else if (direccion === "der") {
     // Cambiar la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
 
@@ -78,7 +78,7 @@ function camino1(direccion) {
 
     // Mostrar el contenedor de respuestas
     document.getElementById("respuestasContainerDer").style.display = "flex";
-   }
+  }
 }
 
 /**
@@ -104,7 +104,9 @@ function mostrarRespuesta1Izq(respuesta) {
     // Ocultar diablillo y contenedor de respuestas
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
-  }//else{} union con la pregunta central 2
+  } else {
+    mostrarCentralP3();
+  }
 }
 
 function mostrarRespuesta1Dere(respuesta) {
@@ -119,7 +121,10 @@ function mostrarRespuesta1Dere(respuesta) {
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atención en historia... Se nota";
     document.getElementById("parrafo2").innerHTML = "El vagón en el que ibas explota y evidentemente mueres, bien hecho campeón";
-  }//else{} union con la pregunta central 2
+  } else {
+    mostrarCentralP3();
+
+  }
 
   // Mostrar botón de reinicio y ocultar lo que no necesitas
   document.getElementById("reiniciar").style.display = "block";
@@ -151,37 +156,37 @@ function reiniciarJuego() {
  * Función que maneja la elección de camino en la segunda fase.
  * @param {string} direccion - La dirección elegida ("izq" o "der").
  */
-function camino2(direccion) {
-  if (direccion === "izq") {
-    // Cambiar la imagen de fondo
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+function camino2() {
 
-    // Actualizar los mensajes
-    document.getElementById("parrafo1").innerHTML = "Pregunta 3";
-    document.getElementById("parrafo2").innerHTML =
-      '<span style="font-size: 24px;">Añañin: Estás en un concurso y tienes que elegir entre tres puertas. ' +
-      'Detrás de una de ellas hay un premio, y detrás de las otras dos la muerte. Tú eliges una puerta, ' +
-      'pero antes de abrirla, el presentador (que sabe dónde está el premio) abre otra puerta la cual no tiene premio. ' +
-      'Ahora solo quedan dos puertas: la que elegiste y otra. El presentador te da la opción de cambiar tu elección. ' +
-      '¿Cambias de puerta o no, genio?</span>';
+  // Cambiar la imagen de fondo
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
 
-    // Ocultar portales
-    document.getElementById("portalIzq").style.display = "none";
-    document.getElementById("portalDer").style.display = "none";
+  // Actualizar los mensajes
+  document.getElementById("parrafo1").innerHTML = "Pregunta 3";
+  document.getElementById("parrafo2").innerHTML =
+    '<span style="font-size: 24px;">Añañin: Estás en un concurso y tienes que elegir entre tres puertas. ' +
+    'Detrás de una de ellas hay un premio, y detrás de las otras dos la muerte. Tú eliges una puerta, ' +
+    'pero antes de abrirla, el presentador (que sabe dónde está el premio) abre otra puerta la cual no tiene premio. ' +
+    'Ahora solo quedan dos puertas: la que elegiste y otra. El presentador te da la opción de cambiar tu elección. ' +
+    '¿Cambias de puerta o no, genio?</span>';
 
-    // Modificar las respuestas
-    document.getElementById("respuestaA").innerHTML = "Me quedo con mi elección";
-    document.getElementById("respuestaB").innerHTML = "Da igual, tienes un 50% de posibilidades";
-    document.getElementById("respuestaC").innerHTML = "Cambio a la otra puerta"; // Correcta. Problema de Monty Hall
+  // Ocultar portales
+  document.getElementById("portalIzq").style.display = "none";
+  document.getElementById("portalDer").style.display = "none";
 
-    // Asignar nuevas funciones a los botones de respuesta
-    document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Izq('A'); };
-    document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Izq('B'); };
-    document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Izq('C'); };
+  // Modificar las respuestas
+  document.getElementById("respuestaA").innerHTML = "Me quedo con mi elección";
+  document.getElementById("respuestaB").innerHTML = "Da igual, tienes un 50% de posibilidades";
+  document.getElementById("respuestaC").innerHTML = "Cambio a la otra puerta"; // Correcta. Problema de Monty Hall
 
-    // Mostrar el contenedor de respuestas
-    document.getElementById("respuestasContainer").style.display = "flex";
-  }
+  // Asignar nuevas funciones a los botones de respuesta
+  document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Izq('A'); };
+  document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Izq('B'); };
+  document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Izq('C'); };
+
+  // Mostrar el contenedor de respuestas
+  document.getElementById("respuestasContainer").style.display = "flex";
+
 }
 
 /**
@@ -205,4 +210,78 @@ function mostrarRespuesta3Izq(respuesta) {
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
   }
+}
+function mostrarCentralP3() {
+  // Cambiar la imagen de fondo
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+
+  // Ocultar la señal
+  document.getElementById("señal1").style.display = "none";
+
+  // Actualizar los mensajes
+  document.getElementById("parrafo1").innerHTML = "Pregunta 3";
+  document.getElementById("parrafo2").innerHTML = "Añañin: Cuantos gays se nesesitan para cambiar una bombilla? ";
+
+
+  // Mostrar el contenedor de respuestas
+  document.getElementById("respuestasContainerCentralP3").style.display = "flex";
+
+}
+function mostrarRespuestaCentralP3(respuesta) {
+  if (respuesta === "A") {
+    // Cambia la imagen de fondo
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
+    document.getElementById("parrafo1").innerHTML = "Añañin: Cuantos gays se nesesitan para cambiar una bombilla? ";
+    document.getElementById("parrafo2").style.display = "none";
+  } else if (respuesta === "B") {
+    // la funcion de laura
+  } else if (respuesta === "C") {
+    camino2();
+
+  }
+
+  // Mostrar botón de reinicio y ocultar lo que no necesitas
+  document.getElementById("reiniciar").style.display = "block";
+  document.getElementById("diablillo").style.display = "none";
+  document.getElementById("respuestasContainerCentralP3").style.display = "none";
+}
+
+
+function mostrarCentralP4() {
+  // Cambiar la imagen de fondo
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+
+  // Ocultar la señal
+  document.getElementById("señal1").style.display = "none";
+
+  // Actualizar los mensajes
+  document.getElementById("parrafo1").innerHTML = "Final";
+  document.getElementById("parrafo2").innerHTML = "Añañin: Raul es el mejor profesor  ";
+
+
+  // Mostrar el contenedor de respuestas
+  document.getElementById("respuestasContainerCentralP3").style.display = "flex";
+
+}
+
+/**
+ * Función que maneja la respuesta del usuario a la pregunta 3.
+ * @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
+ */
+
+function mostrarRespuestaCentralP4(respuesta) {
+  if (respuesta === "A") { //muerte
+    // Cambia la imagen de fondo
+
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP4.jpg")';
+    document.getElementById("parrafo1").innerHTML = "Añañin: Ahora estaras en el infierno eternamente por decir que si";
+    document.getElementById("parrafo2").style.display = "none";
+  } else if (respuesta === "B") { //final feliz
+    // la funcion de laura
+
+  }
+  // Mostrar botón de reinicio y ocultar lo que no necesitas
+  document.getElementById("reiniciar").style.display = "block";
+  document.getElementById("diablillo").style.display = "none";
+  document.getElementById("respuestasContainerCentralP3").style.display = "none";
 }

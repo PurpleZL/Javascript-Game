@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
   <link rel="stylesheet" href="./style/scaperoom.css" />
   <script src="./js/scaperoom.js" defer></script>
 </head>
+
 <body>
 
   <!-- Disclaimer inicial -->
   <div class="disclaimer" id="disclaimer">
     <div class="disclaimer-content">
-      <p>Los temas que se tratan en este juego son pura ficción y humor. Cualquier similitud con la realidad es pura coincidencia.</p>
+      <p>Los temas que se tratan en este juego son pura ficción y humor. Cualquier similitud con la realidad es pura
+        coincidencia.</p>
       <button id="continuar" onclick="iniciarJuego()">Continuar</button>
     </div>
   </div>
-  
+
   <!-- Escena principal del juego -->
   <main class="escena" id="principal">
     <!-- Señal interactiva -->
@@ -31,8 +34,10 @@
 
     <!-- Contenedor de respuestas -->
     <div class="respuestas-container" id="respuestasContainer">
-      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie más</button>
-      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Izq('B')">Espero no oír ni el cuesco ni a Taylor cantar</button>
+      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Izq('A')">No se oye si no hay nadie
+        más</button>
+      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Izq('B')">Espero no oír ni el cuesco ni a
+        Taylor cantar</button>
       <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Izq('C')">Se oye, es obvio</button>
     </div>
 
@@ -52,12 +57,32 @@
     <!-- Personajes adicionales -->
     <div class="dam1" id="dam1"></div>
     <div class="dam2" id="dam2"></div>
-      <!-- Contenedor de respuestas derecha-->
-      <div class="respuestas-container" id="respuestasContainerDer">
-        <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Dere('A')">El extraño resulta ser Mr.Beast y te da 200.000€</button>
-        <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Dere('B')">Nada es un dia completamente normal</button>
-        <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Dere('C')">Desactivaras la mochila con el poder del guion</button>
-      </div>
+    <!-- Contenedor de respuestas derecha-->
+    <div class="respuestas-container" id="respuestasContainerDer">
+      <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Dere('A')">El extraño resulta ser Mr.Beast y
+        te da 200.000€</button>
+      <button class="respuesta" id="respuestaB" onclick="mostrarRespuesta1Dere('B')">Nada es un dia completamente
+        normal</button>
+      <button class="respuesta" id="respuestaC" onclick="mostrarRespuesta1Dere('C')">Desactivaras la mochila con el
+        poder del guion</button>
+    </div>
+
+    <!-- Contenedor de respuestas de la P3 -->
+    <div class="respuestas-container" id="respuestasContainerCentralP3">
+      <button class="respuesta"  id ="respuestaA" onclick="mostrarRespuestaCentralP3('B')">Los gays no pueden <br>cambiar la bombilla 
+      por que se lo<br> meten por el culo</button>
+      <button class="respuesta" id ="respuestaB" onclick="mostrarRespuestaCentralP3('A')">Se nesesita solo uno, <br> una pregunta homofoba</button>
+      <button class="respuesta" id ="respuestaC" onclick="mostrarRespuestaCentralP3('C')">Llaman a un hombre de<br> verdad
+        para cambiarla  </button>
+      
+    </div>
+     <!-- Contenedor de respuestas de la P4 -->
+    <div class="respuestas-container" id="respuestasContainerCentralP4">
+      <button class="respuesta"  id ="respuestaA" onclick="mostrarRespuestaCentralP4('B')">Si</button>
+      <button class="respuesta" id ="respuestaB" onclick="mostrarRespuestaCentralP4('A')">No</button>
+     
+      
+    </div>
   </main>
 
   <!-- Mensajes del juego -->
@@ -66,4 +91,5 @@
     <p id="parrafo2">-Joder, ¡¿Enrique dónde estás, Eeenriiqueee?!</p>
   </footer>
 </body>
+
 </html>
