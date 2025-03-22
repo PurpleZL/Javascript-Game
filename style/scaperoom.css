@@ -149,21 +149,7 @@ body {
   right: 17%;
   background-image: url("../img/Escenarios/portal.png");
 }
-#portalDerecha{
-  top: 17.5%;
-  right: 17%;
-  background-image: url("../img/Escenarios/portal.png");
-}
-#portalIzquierda{
-  top: 17.5%;
-  right: 17%;
-  background-image: url("../img/Escenarios/portal.png");
-}
-#portalCentral{
-  top: 17.5%;
-  right: 17%;
-  background-image: url("../img/Escenarios/portal.png");
-}
+
 
 .diablillo {
   position: absolute;

@@ -105,6 +105,8 @@ function mostrarRespuesta1Izq(respuesta) {
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
   } else {
+    document.getElementById("respuestasContainer").style.display = "none";
+
     mostrarCentralP3();
   }
 }
@@ -122,6 +124,7 @@ function mostrarRespuesta1Dere(respuesta) {
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: No prestabas atención en historia... Se nota";
     document.getElementById("parrafo2").innerHTML = "El vagón en el que ibas explota y evidentemente mueres, bien hecho campeón";
   } else {
+    document.getElementById("reiniciar").style.display = "none";
     mostrarCentralP3();
 
   }
@@ -209,6 +212,10 @@ function mostrarRespuesta3Izq(respuesta) {
     // Ocultar diablillo y contenedor de respuestas
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
+  }else {
+    document.getElementById("respuestasContainer").style.display = "none";
+
+    mostrarCentralP4()
   }
 }
 function mostrarCentralP3() {
@@ -217,6 +224,7 @@ function mostrarCentralP3() {
 
   // Ocultar la señal
   document.getElementById("señal1").style.display = "none";
+  document.getElementById("reiniciar").style.display = "none";
 
   // Actualizar los mensajes
   document.getElementById("parrafo1").innerHTML = "Pregunta 3";
@@ -233,6 +241,7 @@ function mostrarRespuestaCentralP3(respuesta) {
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
     document.getElementById("parrafo1").innerHTML = "Añañin: Cuantos gays se nesesitan para cambiar una bombilla? ";
     document.getElementById("parrafo2").style.display = "none";
+    document.getElementById("reiniciar").style.display = "block";
   } else if (respuesta === "B") {
     // la funcion de laura
   } else if (respuesta === "C") {
@@ -241,7 +250,7 @@ function mostrarRespuestaCentralP3(respuesta) {
   }
 
   // Mostrar botón de reinicio y ocultar lo que no necesitas
-  document.getElementById("reiniciar").style.display = "block";
+  document.getElementById("reiniciar").style.display = "none";
   document.getElementById("diablillo").style.display = "none";
   document.getElementById("respuestasContainerCentralP3").style.display = "none";
 }
@@ -260,7 +269,8 @@ function mostrarCentralP4() {
 
 
   // Mostrar el contenedor de respuestas
-  document.getElementById("respuestasContainerCentralP3").style.display = "flex";
+  document.getElementById("respuestasContainerCentralP4").style.display = "flex";
+  document.getElementById("reiniciar").style.display = "none";
 
 }
 
@@ -270,18 +280,20 @@ function mostrarCentralP4() {
  */
 
 function mostrarRespuestaCentralP4(respuesta) {
-  if (respuesta === "A") { //muerte
+  
+  if (respuesta === "B") { //muerte
     // Cambia la imagen de fondo
 
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP4.jpg")';
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
     document.getElementById("parrafo1").innerHTML = "Añañin: Ahora estaras en el infierno eternamente por decir que si";
     document.getElementById("parrafo2").style.display = "none";
-  } else if (respuesta === "B") { //final feliz
+    document.getElementById("reiniciar").style.display = "block";
+  } else if (respuesta === "A") { //final feliz
     // la funcion de laura
 
   }
   // Mostrar botón de reinicio y ocultar lo que no necesitas
   document.getElementById("reiniciar").style.display = "block";
-  document.getElementById("diablillo").style.display = "none";
-  document.getElementById("respuestasContainerCentralP3").style.display = "none";
+  document.getElementById("diablillo").style.display = "block";
+  document.getElementById("respuestasContainerCentralP4").style.display = "none";
 }
