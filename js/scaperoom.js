@@ -208,9 +208,9 @@ function pregunta3Dere() {
  document.getElementById("portalDer").style.display = "none";
 
  // Modificar las respuestas
- document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro por la puerta de la izquierda";
- document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y les tiro la mochila bomba";
- document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de los 2 porque puerta deberias pasar y escojes la contraria"; // Correcta.me lo dijo el abc
+ document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro <br> por la puerta de la izquierda";
+ document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y <br> les tiro la mochila bomba";
+ document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de  <br> los 2 porque puerta deberias pasar y <br> escojes la contraria"; // Correcta.me lo dijo el abc
 
  // Asignar nuevas funciones a los botones de respuesta
  document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Dere('A'); };
@@ -350,8 +350,8 @@ function mostrarRespuestaCentralP2(respuesta) {
   document.getElementById("diablillo").style.display = "none";
   if (respuesta === "A") {
     // Cambia la imagen de fondo
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
-    document.getElementById("parrafo1").innerHTML = "Añañin: Cuantos gays se nesesitan para cambiar una bombilla? ";
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/")';
+    document.getElementById("parrafo1").innerHTML = " ";
     document.getElementById("parrafo2").style.display = "none";
     document.getElementById("reiniciar").style.display = "block";
     document.getElementById("respuestasContainerCentralP2").style.display = "none";

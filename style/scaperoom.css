@@ -20,6 +20,7 @@ body {
   width: 480px;
   margin: 0;
 }
+
 /* =============================================
      Disclaimer
      ============================================= */
@@ -29,11 +30,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fondo negro semi-transparente */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Asegura que esté por encima de todo */
+  z-index: 1000;
+  /* Asegura que esté por encima de todo */
 }
 
 .disclaimer-content {
@@ -51,7 +54,7 @@ body {
 }
 
 #continuar {
-  background-color: red; 
+  background-color: red;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -61,8 +64,9 @@ body {
 }
 
 #continuar:hover {
-  background-color: blueviolet; 
+  background-color: blueviolet;
 }
+
 /* =============================================
      ESCENA PRINCIPAL
      ============================================= */
@@ -115,7 +119,7 @@ body {
   animation: parpadeo 0.5s infinite alternate;
 }
 
-    
+
 
 @keyframes parpadeo {
 
@@ -166,6 +170,7 @@ body {
   display: none;
   z-index: 10;
 }
+
 
 /* =============================================
      RESPUESTAS Y BOTONES
@@ -277,7 +282,7 @@ body {
 /* =============================================
      Bruja, estudiantes y gnomo
   ============================================= */
-.dam1{
+.dam1 {
   position: absolute;
   width: 400px;
   height: 500px;
@@ -321,13 +326,16 @@ body {
   z-index: 10;
   cursor: pointer;
 }
+
 .bruja {
   background-image: url("../img/Personajes/bruja.png");
 }
-.lidergatorrecorte{
+
+.lidergatorrecorte {
   background-image: url("../img/Personajes/lidergatorrecorte.png");
 
-  }
+}
+
 .gnomo {
   position: absolute;
   width: 400px;
@@ -344,23 +352,78 @@ body {
   background-image: url("../img/Personajes/gnomo.png");
 }
 
-#cablesContainer {
-  display: none;  /* Oculto por defecto */
-  position: absolute; /* Se posiciona en la pantalla */
-  top: 50%;  /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta la posición exacta */
+.bob {
+  background-image: url("../img/Personajes/bob.png");
+  position: absolute;
+  width: 500px;
+  height: 3000px;
+  top: 130%;
+  left: 20%;
+  display: none;
+  background-size: contain;
+  transform: scale(1.5);
+  background-repeat: no-repeat;
+
+
+}
+
+.hombre {
+  background-image: url("../img/Personajes/hombre.png");
+  position: absolute;
+  width: 500px;
+  height: 3000px;
+  top: 125%;
+  left: 10%;
+  display: none;
+  background-size: contain;
+  transform: scale(1.5);
+  background-repeat: no-repeat;
+
+}
+.diablo{
+
+  background-image: url("../img/Personajes/diablo.png");
+  position: absolute;
+  width: 470px;
+  height: 4000px;
+  top: 47%;
+  left: 34%;
+  display: none;
+  background-size: 60%;
   
+  background-repeat: no-repeat;
+ 
+}
+
+
+#cablesContainer {
+  display: none;
+  /* Oculto por defecto */
+  position: absolute;
+  /* Se posiciona en la pantalla */
+  top: 50%;
+  /* Centra verticalmente */
+  left: 50%;
+  /* Centra horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Ajusta la posición exacta */
+
   display: flex;
-  flex-direction: row;  /* Coloca los botones en línea horizontal */
-  align-items: center;  /* Centra los botones en la misma línea */
-  justify-content: center; /* Asegura que estén centrados horizontalmente */
-  gap: 20px; /* Espacio entre botones */
+  flex-direction: row;
+  /* Coloca los botones en línea horizontal */
+  align-items: center;
+  /* Centra los botones en la misma línea */
+  justify-content: center;
+  /* Asegura que estén centrados horizontalmente */
+  gap: 20px;
+  /* Espacio entre botones */
 }
 
 /* Ajustes para los botones */
 #cablesContainer .respuesta {
-  position: static; /* Flexbox maneja la posición */
-  width: 200px; /* Ajusta el ancho de los botones */
+  position: static;
+  /* Flexbox maneja la posición */
+  width: 200px;
+  /* Ajusta el ancho de los botones */
   text-align: center;
 }
