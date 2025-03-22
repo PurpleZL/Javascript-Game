@@ -273,15 +273,26 @@ body {
 }
 
 /* =============================================
-     PERSONAJES ADICIONALES
+     Bruja, estudiantes y gnomo
   ============================================= */
-.dam1,
+.dam1{
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  top: 40%;
+  left: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+}
+
 .dam2 {
   position: absolute;
   width: 400px;
-  height: 1000px;
-  top: 20%;
-  left: 40%;
+  height: 700px;
+  top: 35%;
+  left: 10%;
   background-size: contain;
   background-repeat: no-repeat;
   display: none;
@@ -294,4 +305,37 @@ body {
 
 .dam2 {
   background-image: url("../img/Personajes/dam2.png");
+}
+
+.bruja {
+  position: absolute;
+  width: 420px;
+  height: 1500px;
+  top: 20%;
+  left: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.bruja {
+  background-image: url("../img/Personajes/bruja.png");
+}
+
+.gnomo {
+  position: absolute;
+  width: 400px;
+  height: 1000px;
+  top: 20%;
+  left: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 10;
+}
+
+.gnomo {
+  background-image: url("../img/Personajes/gnomo.png");
 }

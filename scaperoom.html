@@ -23,11 +23,11 @@
   <!-- Escena principal del juego -->
   <main class="escena" id="principal">
     <!-- Señal interactiva -->
-    <div class="señal1" id="señal1" onclick="moverse1()"></div>
+    <div class="señal1" id="señal1" onclick="bifurcacion()"></div>
 
     <!-- Portales -->
-    <div class="portal" id="portalIzq" onclick="camino1('izq')"></div>
-    <div class="portal" id="portalDer" onclick="camino1('der')"></div>
+    <div class="portal" id="portalIzq" onclick="preguntas1('izq')"></div>
+    <div class="portal" id="portalDer" onclick="preguntas1('der')"></div>
 
     <!-- Diablillo Añañin -->
     <div class="diablillo" id="diablillo"></div>
@@ -54,9 +54,11 @@
     <div class="portal" id="portalIzq" onclick="camino2('izq')"></div>
     <div class="portal" id="portalDer" onclick="camino2('der')"></div>
 
-    <!-- Personajes adicionales -->
+    <!-- Bruja, estudiantes y gnomo -->
     <div class="dam1" id="dam1"></div>
     <div class="dam2" id="dam2"></div>
+    <div class="bruja" id="bruja" onclick="transformacion()"></div>
+    <div class="gnomo" id="gnomo"></div>
     <!-- Contenedor de respuestas derecha-->
     <div class="respuestas-container" id="respuestasContainerDer">
       <button class="respuesta" id="respuestaA" onclick="mostrarRespuesta1Dere('A')">El extraño resulta ser Mr.Beast y
@@ -67,12 +69,12 @@
         poder del guion</button>
     </div>
 
-    <!-- Contenedor de respuestas de la P3 -->
-    <div class="respuestas-container" id="respuestasContainerCentralP3">
-      <button class="respuesta"  id ="respuestaA" onclick="mostrarRespuestaCentralP3('B')">Los gays no pueden <br>cambiar la bombilla 
+    <!-- Contenedor de respuestas de la P2 -->
+    <div class="respuestas-container" id="respuestasContainerCentralP2">
+      <button class="respuesta"  id ="respuestaA" onclick="mostrarRespuestaCentralP2('B')">Los gays no pueden <br>cambiar la bombilla 
       por que se lo<br> meten por el culo</button>
-      <button class="respuesta" id ="respuestaB" onclick="mostrarRespuestaCentralP3('A')">Se nesesita solo uno, <br> una pregunta homofoba</button>
-      <button class="respuesta" id ="respuestaC" onclick="mostrarRespuestaCentralP3('C')">Llaman a un hombre de<br> verdad
+      <button class="respuesta" id ="respuestaB" onclick="mostrarRespuestaCentralP2('A')">Se nesesita solo uno, <br> una pregunta homofoba</button>
+      <button class="respuesta" id ="respuestaC" onclick="mostrarRespuestaCentralP2('C')">Llaman a un hombre de<br> verdad
         para cambiarla  </button>
       
     </div>
