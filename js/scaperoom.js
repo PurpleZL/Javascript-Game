@@ -8,7 +8,11 @@
 function iniciarJuego() {
   // Ocultar el disclaimer
   document.getElementById("disclaimer").style.display = "none";
-
+  // Audio de Plants vs Zombies
+  let audio = new Audio("../sound/Plants vs. Zombies Soundtrack.mp3");
+  audio.play();
+  audio.loop = true;  // Hace que el audio se repita infinitamente
+  audio.volume = 0.05; // Ajusta el volumen (1.0 = 100%, 0.0 = 0%)
   // Mostrar la escena principal del juego
   document.getElementById("principal").style.display = "block";
   document.getElementById("bocadillo").style.display = "block";
