@@ -208,14 +208,14 @@ function pregunta3Dere() {
  document.getElementById("portalDer").style.display = "none";
 
  // Modificar las respuestas
- document.getElementById("respuestaADere").innerHTML = "No les pregunto nada y entro por la puerta de la izquierda";
- document.getElementById("respuestaBDere").innerHTML = "Digo que odio las adivinanzas y les tiro la mochila bomba";
- document.getElementById("respuestaCDere").innerHTML = "Le preguntas a cualquiera de los 2 porque puerta deberias pasar y escojes la contraria"; // Correcta.me lo dijo el abc
+ document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro por la puerta de la izquierda";
+ document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y les tiro la mochila bomba";
+ document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de los 2 porque puerta deberias pasar y escojes la contraria"; // Correcta.me lo dijo el abc
 
  // Asignar nuevas funciones a los botones de respuesta
- document.getElementById("respuestaADere").onclick = function () { mostrarRespuesta3Dere('A'); };
- document.getElementById("respuestaBDere").onclick = function () { mostrarRespuesta3Dere('B'); };
- document.getElementById("respuestaCDere").onclick = function () { mostrarRespuesta3Dere('C'); };
+ document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Dere('A'); };
+ document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Dere('B'); };
+ document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Dere('C'); };
 
  // Mostrar el contenedor de respuestas y al diablillo
  document.getElementById("diablillo").style.display = "block";
@@ -227,6 +227,8 @@ function pregunta3Dere() {
  */
 function mostrarRespuesta3Dere(respuesta) {
   if (respuesta !== "C") {
+    document.getElementById("respuestasContainerDer").style.display = "none";
+    pregunta3Dere(); // Llama a la función para mostrar la pregunta 3
     // Cambiar la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/ciudadgato.jpg")';
 
