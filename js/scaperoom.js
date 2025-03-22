@@ -8,11 +8,7 @@
 function iniciarJuego() {
   // Ocultar el disclaimer
   document.getElementById("disclaimer").style.display = "none";
-  // Audio de Plants vs Zombies
-  let audio = new Audio("../sound/Plants vs. Zombies Soundtrack.mp3");
-  audio.play();
-  audio.loop = true;  // Hace que el audio se repita infinitamente
-  audio.volume = 0.05; // Ajusta el volumen (1.0 = 100%, 0.0 = 0%)
+
   // Mostrar la escena principal del juego
   document.getElementById("principal").style.display = "block";
   document.getElementById("bocadillo").style.display = "block";
@@ -155,15 +151,18 @@ function cortarCable(color) {
   if (color === "gris") {
     document.getElementById("parrafo1").innerHTML = "No le dijiste a nadie que eras daltónico, la bomba explota y mueres";
     document.getElementById("parrafo2").innerHTML = "Tal vez no era la mejor opción.";
-  } else if (color === "gris (un poco mas oscuro)") {
+    document.getElementById("cablesContainer").style.display = "none";
+    document.getElementById("reiniciar").style.display = "block";
+  } else if (color === "gris un poco mas oscuro") {
     document.getElementById("parrafo1").innerHTML = "¡Lo lograste! Cortaste el cable azul, ¿Sabías que era el azul verdad?";
     document.getElementById("parrafo2").innerHTML = "Te dan una palmadita en la espalda y a tu casa, venga que Enrique no se busca solo, campeón";
-    mostrarCentralP2();
+    document.getElementById("cablesContainer").style.display = "none";
+    setTimeout(mostrarCentralP2, 6000);
   }
 
   // Ocultar contenedor de cables y mostrar reinicio
   document.getElementById("cablesContainer").style.display = "none";
-  document.getElementById("reiniciar").style.display = "block";
+  
 }
 
 
