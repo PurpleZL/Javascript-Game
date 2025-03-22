@@ -113,7 +113,7 @@ function mostrarRespuesta1Izq(respuesta) {
 
 function mostrarRespuesta1Dere(respuesta) {
   // Mensajes según la respuesta
-  if (respuesta === "C") {
+  if (respuesta === "A") {
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Pero que te crees que la vida es una película";
@@ -129,12 +129,37 @@ function mostrarRespuesta1Dere(respuesta) {
     document.getElementById("reiniciar").style.display = "block";
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainerDer").style.display = "none";
-  } else {
+  } else if (respuesta === "C") {
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: ¿Cuál cortas, el rojo o el azul?";
+    document.getElementById("parrafo2").innerHTML = "Tienes poco tiempo, elige bien...";
+    
+    // Ocultar respuestas anteriores y mostrar la pregunta del cable
+    document.getElementById("respuestasContainerDer").style.display = "none";
+    document.getElementById("cablesContainer").style.display = "flex";
     // Mostrar botón de reinicio y ocultar lo que no necesitas
     document.getElementById("reiniciar").style.display = "none";
-    document.getElementById("respuestasContainerDer").style.display = "none";
+
+   
+  }
+}
+
+/** funcion para cortar cables */
+function cortarCable(color) {
+  color = color.toLowerCase();  // Convierte todo a minúsculas
+  document.getElementById("cablesContainer").style.display = "flex";
+  if (color === "gris") {
+    document.getElementById("parrafo1").innerHTML = "No le dijiste a nadie que eras daltónico, la bomba explota y mueres";
+    document.getElementById("parrafo2").innerHTML = "Tal vez no era la mejor opción.";
+  } else if (color === "gris (un poco mas oscuro)") {
+    document.getElementById("parrafo1").innerHTML = "¡Lo lograste! Cortaste el cable azul, ¿Sabías que era el azul verdad?";
+    document.getElementById("parrafo2").innerHTML = "Te dan una palmadita en la espalda y a tu casa, venga que Enrique no se busca solo, campeón";
     mostrarCentralP2();
   }
+
+  // Ocultar contenedor de cables y mostrar reinicio
+  document.getElementById("cablesContainer").style.display = "none";
+  document.getElementById("reiniciar").style.display = "block";
 }
 
 

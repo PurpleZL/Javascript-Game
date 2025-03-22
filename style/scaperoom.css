@@ -115,6 +115,8 @@ body {
   animation: parpadeo 0.5s infinite alternate;
 }
 
+    
+
 @keyframes parpadeo {
 
   0%,
