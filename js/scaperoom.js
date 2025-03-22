@@ -358,7 +358,7 @@ function mostrarRespuestaCentralP2(respuesta) {
     document.getElementById("reiniciar").style.display = "block";
   } else if (respuesta === "B") {
     document.getElementById("respuestasContainerCentralP2").style.display = "none";
-    // la funcion de laura
+    pregunta3Dere(); // aqui te he unido la pregunta
   } else if (respuesta === "C") {
     document.getElementById("respuestasContainerCentralP2").style.display = "none";
     pregunta3Izq();
