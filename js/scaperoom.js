@@ -13,7 +13,7 @@ function iniciarJuego() {
   audio.play();
   audio.loop = true;  // Hace que el audio se repita infinitamente
   audio.volume = 0.05; // Ajusta el volumen (1.0 = 100%, 0.0 = 0%)
- 
+
   // Mostrar la escena principal del juego
   document.getElementById("principal").style.display = "block";
   document.getElementById("bocadillo").style.display = "block";
@@ -112,7 +112,7 @@ function mostrarRespuesta1Izq(respuesta) {
   } else {
     document.getElementById("respuestasContainer").style.display = "none";
     mostrarCentralP2
-  ();
+      ();
   }
 }
 
@@ -138,14 +138,14 @@ function mostrarRespuesta1Dere(respuesta) {
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/metroDeMadrid.jpg")';
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: ¿Cuál cortas, el rojo o el azul?";
     document.getElementById("parrafo2").innerHTML = "Tienes poco tiempo, elige bien...";
-    
+
     // Ocultar respuestas anteriores y mostrar la pregunta del cable
     document.getElementById("respuestasContainerDer").style.display = "none";
     document.getElementById("cablesContainer").style.display = "flex";
     // Mostrar botón de reinicio y ocultar lo que no necesitas
     document.getElementById("reiniciar").style.display = "none";
 
-   
+
   }
 }
 /** funcion para cortar cables */
@@ -168,8 +168,8 @@ function cortarCable(color) {
   document.getElementById("cablesContainer").style.display = "none";
   // Ocultar diablillo
   document.getElementById("diablillo").style.display = "none";
-  
-  
+
+
 }
 
 
@@ -195,40 +195,42 @@ function reiniciarJuego() {
  * @param {string} direccion - La dirección elegida ("izq" o "der").
  */
 function pregunta3Dere() {
- // Cambiar la imagen de fondo
- document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
- // Actualizar los mensajes
- document.getElementById("parrafo1").innerHTML = "Pregunta 3";
- document.getElementById("parrafo2").innerHTML =
-   '<span style="font-size: 24px;">Añañin: Estas enfrente de dos troles, uno siempre dice la verdad y el otro siempre miente. ' +
-    'Tienes 1 pregunta para descubrir cual es la puerta que te llevara a Enrique </span>'; 
+  // Cambiar la imagen de fondo
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/3puertas.jpg")';
+  // Actualizar los mensajes
+  document.getElementById("parrafo1").innerHTML = "Pregunta 3";
+  document.getElementById("parrafo2").innerHTML =
+    '<span style="font-size: 24px;">Añañin: Estas enfrente de dos troles, uno siempre dice la verdad y el otro siempre miente. ' +
+    'Tienes 1 pregunta para descubrir cual es la puerta que te llevara a Enrique </span>';
 
- // Ocultar portales
- document.getElementById("portalIzq").style.display = "none";
- document.getElementById("portalDer").style.display = "none";
+  // Ocultar portales
+  document.getElementById("portalIzq").style.display = "none";
+  document.getElementById("portalDer").style.display = "none";
 
- // Modificar las respuestas
- document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro <br> por la puerta de la izquierda";
- document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y <br> les tiro la mochila bomba";
- document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de  <br> los 2 porque puerta deberias pasar y <br> escojes la contraria"; // Correcta.me lo dijo el abc
+  // Modificar las respuestas
+  document.getElementById("respuestaA").innerHTML = "No les pregunto nada y entro <br> por la puerta de la izquierda";
+  document.getElementById("respuestaB").innerHTML = "Digo que odio las adivinanzas y <br> les tiro la mochila bomba";
+  document.getElementById("respuestaC").innerHTML = "Le preguntas a cualquiera de  <br> los 2 porque puerta deberias pasar y <br> escojes la contraria"; // Correcta.me lo dijo el abc
 
- // Asignar nuevas funciones a los botones de respuesta
- document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Dere('A'); };
- document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Dere('B'); };
- document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Dere('C'); };
+  // Asignar nuevas funciones a los botones de respuesta
+  document.getElementById("respuestaA").onclick = function () { mostrarRespuesta3Dere('A'); };
+  document.getElementById("respuestaB").onclick = function () { mostrarRespuesta3Dere('B'); };
+  document.getElementById("respuestaC").onclick = function () { mostrarRespuesta3Dere('C'); };
 
- // Mostrar el contenedor de respuestas y al diablillo
- document.getElementById("diablillo").style.display = "block";
- document.getElementById("respuestasContainer").style.display = "flex";
+  // Mostrar el contenedor de respuestas y al diablillo
+  document.getElementById("diablillo").style.display = "block";
+  document.getElementById("respuestasContainer").style.display = "flex";
 }
- /**
- * Función que maneja la respuesta del usuario a la pregunta 3.
- * @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
- */
+/**
+* Función que maneja la respuesta del usuario a la pregunta 3.
+* @param {string} respuesta - La respuesta elegida ("A", "B" o "C").
+*/
 function mostrarRespuesta3Dere(respuesta) {
   if (respuesta !== "C") {
+    // Ocultar diablillo y contenedor de respuestas
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
+
     document.getElementById("respuestasContainerDer").style.display = "none";
     // Llama a la función para mostrar la pregunta 3
     // Cambiar la imagen de fondo
@@ -237,15 +239,15 @@ function mostrarRespuesta3Dere(respuesta) {
     // Actualizar los mensajes
     document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Te encuentras en una pequeña ciudad llena de gatitos";
     document.getElementById("parrafo2").innerHTML = "Voz Misteriosa: El lider se acerca y te pregunta como has llegado hasta allí, le respondes que has pasado por la puerta de la derecha y te dice que te ayudaran a buscar a tu perro,es mentira te esclavizan,ya no puedes buscar a Enrique";
-    
+
 
     // Mostrar bruja, estudiantes, gnomo y botón de reinicio
     document.getElementById("reiniciar").style.display = "block";
     document.getElementById("lidergatorrecorte").style.display = "block";
 
     // Ocultar diablillo y contenedor de respuestas
-   
-  }else {
+
+  } else {
     document.getElementById("respuestasContainer").style.display = "none";
     mostrarCentralP4()
   }
@@ -317,7 +319,7 @@ function mostrarRespuesta3Izq(respuesta) {
     // Ocultar diablillo y contenedor de respuestas
     document.getElementById("diablillo").style.display = "none";
     document.getElementById("respuestasContainer").style.display = "none";
-  }else {
+  } else {
     document.getElementById("respuestasContainer").style.display = "none";
     mostrarCentralP4()
   }
@@ -326,7 +328,7 @@ function mostrarRespuesta3Izq(respuesta) {
 /**
  * Función especial al hacer click en la bruja.
  */
-function transformacion(){
+function transformacion() {
   document.getElementById("bruja").style.display = "none";
   document.getElementById("gnomo").style.display = "block";
   document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Notas algo en la bruja, su belleza es demasiado... artificial. Te das cuenta que es un hechizo de ilusión y que realmente hay un gnomo haciendo cosplay";
@@ -352,8 +354,15 @@ function mostrarRespuestaCentralP2(respuesta) {
   if (respuesta === "A") {
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/villa2.jpg")';
+    document.getElementById("bob").style.display = "block";
     document.getElementById("diablo").style.display = "block";
-    document.getElementById("parrafo1").innerHTML = " ";
+    document.getElementById("hombre").style.display = "block";
+    document.getElementById("parrafo1").innerHTML = "Capitan: ¿Están listos, chicos? <br>" +
+      "Sí, capitán, estamos listos <br>" +
+      "No los escucho <br>" +
+      "¡Sí, capitán, estamos listos!" +
+      "Vive en una piña debajo del mar <br> " +
+      "los homofobicos ";
     document.getElementById("parrafo2").style.display = "none";
     document.getElementById("reiniciar").style.display = "block";
     document.getElementById("respuestasContainerCentralP2").style.display = "none";
@@ -388,7 +397,7 @@ function mostrarCentralP4() {
  */
 
 function mostrarRespuestaCentralP4(respuesta) {
-  
+
   if (respuesta === "A") { //muerte
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
@@ -397,9 +406,9 @@ function mostrarRespuestaCentralP4(respuesta) {
     document.getElementById("reiniciar").style.display = "block";
     // Mover al diablillo a una nueva posición
     let diablillo = document.getElementById("diablillo");
-    diablillo.style.position = "absolute"; 
-    diablillo.style.top = "60%"; 
-    diablillo.style.left = "80%"; 
+    diablillo.style.position = "absolute";
+    diablillo.style.top = "60%";
+    diablillo.style.left = "80%";
   } else if (respuesta === "B") { //final feliz
     // la funcion de laura
 
