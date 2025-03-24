@@ -241,19 +241,19 @@ body {
 }
 
 #censure1 {
-  top: 44%;
+  top: 42%;
   left: 43%;
   background-image: url("../img/Personajes/censured.png");
 }
 
 #censure2 {
-  top: 44%;
+  top: 42%;
   right: 43%;
   background-image: url("../img/Personajes/censured.png");
 }
 
 #censure3 {
-  top: 65%;
+  top: 60%;
   right: 47.5%;
   background-image: url("../img/Personajes/censured.png");
 }
