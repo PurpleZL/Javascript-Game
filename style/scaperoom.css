@@ -134,7 +134,7 @@ body {
 }
 
 .portal {
-  position: absolute;
+  position: fixed; /* Se mantiene en la misma posición en la pantalla */
   width: 400px;
   height: 1000px;
   background-size: contain;
@@ -145,14 +145,14 @@ body {
 }
 
 #portalIzq {
-  top: 17.5%;
-  left: 19%;
+  top: 25vh;
+  left: 19vw;
   background-image: url("../img/Escenarios/portal.png");
 }
 
 #portalDer {
-  top: 17.5%;
-  right: 17%;
+  top: 25vh;
+  right: 16vw;
   background-image: url("../img/Escenarios/portal.png");
 }
 
@@ -216,47 +216,48 @@ body {
 /* =============================================
      TROLL Y CENSURAS
      ============================================= */
-.troll {
-  position: absolute;
-  width: 400px;
-  height: 1000px;
-  top: 20%;
-  left: 40%;
-  background-image: url("../img/Personajes/troll.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
-}
-
-.censure {
-  position: absolute;
-  width: 100px;
-  height: 1000px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: none;
-  z-index: 10;
-}
-
-#censure1 {
-  top: 42%;
-  left: 43%;
-  background-image: url("../img/Personajes/censured.png");
-}
-
-#censure2 {
-  top: 42%;
-  right: 43%;
-  background-image: url("../img/Personajes/censured.png");
-}
-
-#censure3 {
-  top: 60%;
-  right: 47.5%;
-  background-image: url("../img/Personajes/censured.png");
-}
+     .troll {
+      position: fixed; /* Se mantiene en la misma posición en la pantalla */
+      width: 400px;
+      height: 1000px;
+      top: 20vh; /* Relativo a la altura de la ventana */
+      left: 40vw; /* Relativo al ancho de la ventana */
+      background-image: url("../img/Personajes/troll.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: none;
+      z-index: 10;
+    }
+    
+    .censure {
+      position: fixed; /* Se mantiene fija en la pantalla */
+      width: 100px;
+      height: 1000px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      display: none;
+      z-index: 10;
+    }
+    
+    #censure1 {
+      top: 42vh;
+      left: 43vw;
+      background-image: url("../img/Personajes/censured.png");
+    }
+    
+    #censure2 {
+      top: 42vh;
+      right: 43vw;
+      background-image: url("../img/Personajes/censured.png");
+    }
+    
+    #censure3 {
+      top: 60vh;
+      right: 47.5vw;
+      background-image: url("../img/Personajes/censured.png");
+    }
+    
 
 /* =============================================
      BOTÓN DE REINICIO
