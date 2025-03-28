@@ -1,475 +1,475 @@
 /* =============================================
    FUENTES Y ESTILOS GENERALES
    ============================================= */
-@font-face {
-  font-family: "ComicKids-WyvKG";
-  src: url("../fonts/ComicKids-WyvKG.otf");
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.escena,
-.mensaje {
-  width: 480px;
-  margin: 0;
-}
-
-/* =============================================
-     Disclaimer
-     ============================================= */
-.disclaimer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Fondo negro semi-transparente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  /* Asegura que esté por encima de todo */
-}
-
-.disclaimer-content {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  max-width: 80%;
-}
-
-.disclaimer-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-#continuar {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#continuar:hover {
-  background-color: blueviolet;
-}
-
-/* =============================================
-     ESCENA PRINCIPAL
-     ============================================= */
-.escena {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("../img/Escenarios/casaperro.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-/* =============================================
-     MENSAJES DEL JUEGO
-   ============================================= */
-.mensaje {
-  font-family: "ComicKids-WyvKG";
-  background-color: white;
-  padding: 10px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.mensaje p {
-  margin-left: 10px;
-  font-size: 24px;
-}
-
-/* =============================================
-     ELEMENTOS INTERACTIVOS
-     ============================================= */
-.señal1 {
-  position: absolute;
-  top: 20%;
-  right: 20%;
-  width: 150px;
-  height: 350px;
-  background-image: url("../img/Escenarios/señal.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  z-index: 9;
-  animation: parpadeo 0.5s infinite alternate;
-}
-
-
-
-@keyframes parpadeo {
-
-  0%,
-  50% {
-    opacity: 1;
+   @font-face {
+    font-family: "ComicKids-WyvKG";
+    src: url("../fonts/ComicKids-WyvKG.otf");
   }
-
-  100% {
-    opacity: 0.5;
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-}
-
-.portal {
-  position: fixed; /* Se mantiene en la misma posición en la pantalla */
-  width: 400px;
-  height: 1000px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: none;
-  z-index: 10;
-}
-
-#portalIzq {
-  top: 25vh;
-  left: 19vw;
-  background-image: url("../img/Escenarios/portal.png");
-}
-
-#portalDer {
-  top: 25vh;
-  right: 16vw;
-  background-image: url("../img/Escenarios/portal.png");
-}
-
-
-.diablillo {
-  position: absolute;
-  width: 200px;
-  height: 1000px;
-  top: 60%;
-  left: 85%;
-  background-image: url("../img/Personajes/demonilloañañin.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  display: none;
-  z-index: 10;
-}
-
-
-/* =============================================
-     RESPUESTAS Y BOTONES
-     ============================================= */
-.respuestas-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-.respuesta {
-  position: absolute;
-  padding: 10px 20px;
-  background-color: lightblue;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 24px;
-}
-
-.respuesta:hover {
-  background-color: royalblue;
-}
-
-#respuestaA {
-  top: 40%;
-  left: 5%;
-}
-
-#respuestaB {
-  top: 40%;
-  left: 53%;
-  transform: translateX(-50%);
-}
-
-#respuestaC {
-  top: 40%;
-  right: 5%;
-}
-
-/* =============================================
-     TROLL Y CENSURAS
-     ============================================= */
-     .troll {
-      position: fixed; /* Se mantiene en la misma posición en la pantalla */
-      width: 400px;
-      height: 1000px;
-      top: 20vh; /* Relativo a la altura de la ventana */
-      left: 40vw; /* Relativo al ancho de la ventana */
-      background-image: url("../img/Personajes/troll.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      display: none;
-      z-index: 10;
-    }
-    
-    .censure {
-      position: fixed; /* Se mantiene fija en la pantalla */
-      width: 100px;
-      height: 1000px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      display: none;
-      z-index: 10;
-    }
-    
-    #censure1 {
-      top: 42vh;
-      left: 43vw;
-      background-image: url("../img/Personajes/censured.png");
-    }
-    
-    #censure2 {
-      top: 42vh;
-      right: 43vw;
-      background-image: url("../img/Personajes/censured.png");
-    }
-    
-    #censure3 {
-      top: 60vh;
-      right: 47.5vw;
-      background-image: url("../img/Personajes/censured.png");
-    }
-    
-
-/* =============================================
-     BOTÓN DE REINICIO
-     ============================================= */
-#reiniciar {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  display: none;
-}
-
-#reiniciar:hover {
-  background-color: darkred;
-}
-
-/* =============================================
-     Bruja, estudiantes y gnomo
-  ============================================= */
-.dam1 {
-  position: absolute;
-  width: 400px;
-  height: 500px;
-  top: 40%;
-  left: 80%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
-}
-
-.dam2 {
-  position: absolute;
-  width: 400px;
-  height: 700px;
-  top: 35%;
-  left: 10%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
-}
-
-.dam1 {
-  background-image: url("../img/Personajes/dam1.png");
-}
-
-.dam2 {
-  background-image: url("../img/Personajes/dam2.png");
-}
-
-.bruja {
-  position: absolute;
-  width: 420px;
-  height: 1500px;
-  top: 20%;
-  left: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.bruja {
-  background-image: url("../img/Personajes/bruja.png");
-}
-
-.lidergatorrecorte {
-  background-image: url("../img/Personajes/lidergatorrecorte.png");
-
-}
-
-.gnomo {
-  position: absolute;
-  width: 400px;
-  height: 1000px;
-  top: 20%;
-  left: 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: none;
-  z-index: 10;
-}
-
-.gnomo {
-  background-image: url("../img/Personajes/gnomo.png");
-}
-
-.bob {
-  background-image: url("../img/Personajes/bob.png");
-  position: absolute;
-  width: 500px;
-  height: 3000px;
-  top: 130%;
-  left: 20%;
-  display: none;
-  background-size: contain;
-  transform: scale(1.5);
-  background-repeat: no-repeat;
-
-
-}
-
-.hombre {
-  background-image: url("../img/Personajes/hombre.png");
-  position: absolute;
-  width: 500px;
-  height: 3000px;
-  top: 125%;
-  left: 10%;
-  display: none;
-  background-size: contain;
-  transform: scale(1.5);
-  background-repeat: no-repeat;
-
-}
-.diablo{
-
-  background-image: url("../img/Personajes/diablo.png");
-  position: absolute;
-  width: 470px;
-  height: 4000px;
-  top: 47%;
-  left: 34%;
-  display: none;
-  background-size: 60%;
   
-  background-repeat: no-repeat;
- 
-}
-
-
-#cablesContainer {
-  display: none;
-  /* Oculto por defecto */
-  position: absolute;
-  /* Se posiciona en la pantalla */
-  top: 50%;
-  /* Centra verticalmente */
-  left: 50%;
-  /* Centra horizontalmente */
-  transform: translate(-50%, -50%);
-  /* Ajusta la posición exacta */
-
-  display: flex;
-  flex-direction: row;
-  /* Coloca los botones en línea horizontal */
-  align-items: center;
-  /* Centra los botones en la misma línea */
-  justify-content: center;
-  /* Asegura que estén centrados horizontalmente */
-  gap: 20px;
-  /* Espacio entre botones */
-}
-
-/* Ajustes para los botones */
-#cablesContainer .respuesta {
-  position: static;
-  /* Flexbox maneja la posición */
-  width: 200px;
-  /* Ajusta el ancho de los botones */
-  text-align: center;
-}
-/*
-#respuestasContainerCentralP4{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
-
-
+  .escena,
+  .mensaje {
+    width: 480px;
+    margin: 0;
+  }
   
-}
-#respuestasContainerCentralP4 .respuestas-container{
-  position: absolute;
-  padding: 10px 20px;
-  background-color: lightblue;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 24px;
-}
-  */
-#respuestasA {
-  padding: 10px 20px;
-  top: 50%;
-  left: 27%;
-  position: absolute;
-  background-color: lightblue;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 24px;
-}
-#respuestasB {
-  padding: 10px 20px;
-  top: 50%;
-  left: 70%;
-  position: absolute;
-  background-color: lightblue;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 24px;
-}
+  /* =============================================
+       Disclaimer
+       ============================================= */
+  .disclaimer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Fondo negro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Asegura que esté por encima de todo */
+  }
+  
+  .disclaimer-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 80%;
+  }
+  
+  .disclaimer-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  #continuar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #continuar:hover {
+    background-color: blueviolet;
+  }
+  
+  /* =============================================
+       ESCENA PRINCIPAL
+       ============================================= */
+  .escena {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../img/Escenarios/casaperro.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* =============================================
+       MENSAJES DEL JUEGO
+     ============================================= */
+  .mensaje {
+    font-family: "ComicKids-WyvKG";
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mensaje p {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  
+  /* =============================================
+       ELEMENTOS INTERACTIVOS
+       ============================================= */
+  .señal1 {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 150px;
+    height: 350px;
+    background-image: url("../img/Escenarios/señal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 9;
+    animation: parpadeo 0.5s infinite alternate;
+  }
+  
+  
+  
+  @keyframes parpadeo {
+  
+    0%,
+    50% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  .portal {
+    position: fixed; /* Se mantiene en la misma posición en la pantalla */
+    width: 400px;
+    height: 1000px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+  }
+  
+  #portalIzq {
+    top: 25vh;
+    left: 19vw;
+    background-image: url("../img/Escenarios/portal.png");
+  }
+  
+  #portalDer {
+    top: 25vh;
+    right: 16vw;
+    background-image: url("../img/Escenarios/portal.png");
+  }
+  
+  
+  .diablillo {
+    position: absolute;
+    width: 200px;
+    height: 1000px;
+    top: 60%;
+    left: 85%;
+    background-image: url("../img/Personajes/demonilloañañin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+  }
+  
+  
+  /* =============================================
+       RESPUESTAS Y BOTONES
+       ============================================= */
+  .respuestas-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  
+  .respuesta {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .respuesta:hover {
+    background-color: royalblue;
+  }
+  
+  #respuestaA {
+    top: 40%;
+    left: 5%;
+  }
+  
+  #respuestaB {
+    top: 40%;
+    left: 53%;
+    transform: translateX(-50%);
+  }
+  
+  #respuestaC {
+    top: 40%;
+    right: 5%;
+  }
+  
+  /* =============================================
+       TROLL Y CENSURAS
+       ============================================= */
+       .troll {
+        position: fixed; /* Se mantiene en la misma posición en la pantalla */
+        width: 400px;
+        height: 1000px;
+        top: 20vh; /* Relativo a la altura de la ventana */
+        left: 40vw; /* Relativo al ancho de la ventana */
+        background-image: url("../img/Personajes/troll.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: none;
+        z-index: 10;
+      }
+      
+      .censure {
+        position: fixed; /* Se mantiene fija en la pantalla */
+        width: 100px;
+        height: 1000px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: none;
+        z-index: 10;
+      }
+      
+      #censure1 {
+        top: 42vh;
+        left: 43vw;
+        background-image: url("../img/Personajes/censured.png");
+      }
+      
+      #censure2 {
+        top: 42vh;
+        right: 43vw;
+        background-image: url("../img/Personajes/censured.png");
+      }
+      
+      #censure3 {
+        top: 60vh;
+        right: 47.5vw;
+        background-image: url("../img/Personajes/censured.png");
+      }
+      
+  
+  /* =============================================
+       BOTÓN DE REINICIO
+       ============================================= */
+  #reiniciar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #reiniciar:hover {
+    background-color: darkred;
+  }
+  
+  /* =============================================
+       Bruja, estudiantes y gnomo
+    ============================================= */
+  .dam1 {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: 40%;
+    left: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 10;
+  }
+  
+  .dam2 {
+    position: absolute;
+    width: 400px;
+    height: 700px;
+    top: 35%;
+    left: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 10;
+  }
+  
+  .dam1 {
+    background-image: url("../img/Personajes/dam1.png");
+  }
+  
+  .dam2 {
+    background-image: url("../img/Personajes/dam2.png");
+  }
+  
+  .bruja {
+    position: absolute;
+    width: 420px;
+    height: 1500px;
+    top: 20%;
+    left: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .bruja {
+    background-image: url("../img/Personajes/bruja.png");
+  }
+  
+  .lidergatorrecorte {
+    background-image: url("../img/Personajes/lidergatorrecorte.png");
+  
+  }
+  
+  .gnomo {
+    position: absolute;
+    width: 400px;
+    height: 1000px;
+    top: 20%;
+    left: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 10;
+  }
+  
+  .gnomo {
+    background-image: url("../img/Personajes/gnomo.png");
+  }
+  
+  .bob {
+    background-image: url("../img/Personajes/bob.png");
+    position: absolute;
+    width: 500px;
+    height: 3000px;
+    top: 130%;
+    left: 20%;
+    display: none;
+    background-size: contain;
+    transform: scale(1.5);
+    background-repeat: no-repeat;
+  
+  
+  }
+  
+  .hombre {
+    background-image: url("../img/Personajes/hombre.png");
+    position: absolute;
+    width: 500px;
+    height: 3000px;
+    top: 125%;
+    left: 10%;
+    display: none;
+    background-size: contain;
+    transform: scale(1.5);
+    background-repeat: no-repeat;
+  
+  }
+  .diablo{
+  
+    background-image: url("../img/Personajes/diablo.png");
+    position: absolute;
+    width: 470px;
+    height: 4000px;
+    top: 47%;
+    left: 34%;
+    display: none;
+    background-size: 60%;
+    
+    background-repeat: no-repeat;
+   
+  }
+  
+  
+  #cablesContainer {
+    display: none;
+    /* Oculto por defecto */
+    position: absolute;
+    /* Se posiciona en la pantalla */
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición exacta */
+  
+    display: flex;
+    flex-direction: row;
+    /* Coloca los botones en línea horizontal */
+    align-items: center;
+    /* Centra los botones en la misma línea */
+    justify-content: center;
+    /* Asegura que estén centrados horizontalmente */
+    gap: 20px;
+    /* Espacio entre botones */
+  }
+  
+  /* Ajustes para los botones */
+  #cablesContainer .respuesta {
+    position: static;
+    /* Flexbox maneja la posición */
+    width: 200px;
+    /* Ajusta el ancho de los botones */
+    text-align: center;
+  }
+  /*
+  #respuestasContainerCentralP4{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+  
+  
+    
+  }
+  #respuestasContainerCentralP4 .respuestas-container{
+    position: absolute;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+  }
+    */
+  #respuestasA {
+    padding: 10px 20px;
+    top: 50%;
+    left: 27%;
+    position: absolute;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+  }
+  #respuestasB {
+    padding: 10px 20px;
+    top: 50%;
+    left: 70%;
+    position: absolute;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+  }
