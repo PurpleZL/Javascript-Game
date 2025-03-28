@@ -355,8 +355,8 @@ function mostrarRespuestaCentralP2(respuesta) {
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/villa2.jpg")';
     document.getElementById("bob").style.display = "block";
-    document.getElementById("diablo").style.display = "block";
-    document.getElementById("hombre").style.display = "block";
+    document.getElementById("calamardo").style.display = "block";
+    document.getElementById("patricio").style.display = "block";
     document.getElementById("parrafo1").innerHTML = "Capitan: ¿Están listos, chicos? <br>" +
       "Sí, capitán, estamos listos <br>" +
       "No los escucho <br>" +
@@ -400,10 +400,11 @@ function mostrarRespuestaCentralP4(respuesta) {
 
   if (respuesta === "A") { //muerte
     // Cambia la imagen de fondo
-    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
-    document.getElementById("parrafo1").innerHTML = "Añañin: Ahora estaras en el infierno socialista eternamente";
-    document.getElementById("parrafo2").style.display = "none";
-    document.getElementById("reiniciar").style.display = "block";
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/casaperro.jpg")';
+    document.getElementById("perro").style.display = "block";
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Ese perro no es un poco socialista.";
+    document.getElementById("parrafo2").innerHTML = "Enrique: La inflacion es de falangista... <br> Digo... woof woof";
+    document.getElementById("reiniciar").style.display = "none";
     // Mover al diablillo a una nueva posición
     let diablillo = document.getElementById("diablillo");
     diablillo.style.position = "absolute";
@@ -414,7 +415,18 @@ function mostrarRespuestaCentralP4(respuesta) {
 
   }
   // Mostrar botón de reinicio y ocultar lo que no necesitas
-  document.getElementById("reiniciar").style.display = "block";
-  document.getElementById("diablillo").style.display = "block";
+  document.getElementById("reiniciar").style.display = "none";
+  document.getElementById("diablillo").style.display = "none";
   document.getElementById("respuestasContainerCentralP4").style.display = "none";
+}
+
+
+function transformacionSanchez() {
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
+  document.getElementById("perro").style.display = "none";
+  document.getElementById("perroSanchez").style.display = "block";
+  document.getElementById("parrafo1").innerHTML = "Voz misteriosa: ¡¡¡OH NO !!! Es PerroSanchez";
+  document.getElementById("parrafo2").innerHTML = "PerroSanchez: Votadme tengo loquitas a todas las Charos. ";
+  document.getElementById("reiniciar").style.display = "block";
+  document.getElementById("diablillo").style.display = "none";
 }
