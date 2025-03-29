@@ -410,12 +410,18 @@ function mostrarRespuestaCentralP4(respuesta) {
     diablillo.style.position = "absolute";
     diablillo.style.top = "60%";
     diablillo.style.left = "80%";
-  } else if (respuesta === "B") { //final feliz
-    // la funcion de laura
-
-  }
+  }  else if (respuesta === "B") { // Final feliz
+    document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/casaperro.jpg")';
+    document.getElementById("perro").style.display = "block";  // No se oculta por transformacionSanchez
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Has conseguido encontrar a Enrique";
+    document.getElementById("parrafo2").innerHTML = "Enrique: <br><br> Voz misteriosa: Los perros no hablan";
+    
+    document.getElementById("perro").onclick = function(event) {//odio la tranformacion
+      event.stopPropagation(); // Evita que el clic haga algo
+  };
+}
   // Mostrar botón de reinicio y ocultar lo que no necesitas
-  document.getElementById("reiniciar").style.display = "none";
+  document.getElementById("reiniciar").style.display = "block";
   document.getElementById("diablillo").style.display = "none";
   document.getElementById("respuestasContainerCentralP4").style.display = "none";
 }
