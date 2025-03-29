@@ -409,7 +409,21 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+  .perroSanchez {
+     /*fixead el tamaño de luisa y la posicion*/
+      background-image: url("../img/Personajes/perroSanchez-Sin\ fondo-Photoroom.png");
+      width: 900px;
+      height: 2100px;
+      position: absolute; /* Para que pueda posicionarse dentro de .escena */
+      top: 68%;
+      left: 60%;
+      transform: translate(-50%, -50%); /* Centrar correctamente */
+      display: none;
+      background-size: contain; /* Ajusta la imagen dentro del elemento */
+      background-repeat: no-repeat;
+      background-position: center;
+
+  }
   
   #cablesContainer {
     display: none;

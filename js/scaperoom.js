@@ -428,9 +428,9 @@ function mostrarRespuestaCentralP4(respuesta) {
 
 
 function transformacionSanchez() {
-  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
-  document.getElementById("perro").style.display = "none";
   document.getElementById("perroSanchez").style.display = "block";
+  document.getElementById("perro").style.display = "none";
+  document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
   document.getElementById("parrafo1").innerHTML = "Voz misteriosa: ¡¡¡OH NO !!! Es PerroSanchez";
   document.getElementById("parrafo2").innerHTML = "PerroSanchez: Votadme tengo loquitas a todas las Charos. ";
   document.getElementById("reiniciar").style.display = "block";
