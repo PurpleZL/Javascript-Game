@@ -398,7 +398,7 @@ function mostrarCentralP4() {
 
 function mostrarRespuestaCentralP4(respuesta) {
 
-  if (respuesta === "A") { //muerte
+  if (respuesta === "A") { //final malo
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/casaperro.jpg")';
     document.getElementById("perro").style.display = "block";

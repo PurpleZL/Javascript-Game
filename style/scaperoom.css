@@ -166,7 +166,6 @@
     background-image: url("../img/Personajes/demonilloañañin.png");
     background-size: contain;
     background-repeat: no-repeat;
-    cursor: pointer;
     display: none;
     z-index: 10;
   }
@@ -391,18 +390,24 @@
     left: 38%;
     display: none;
     background-size: 60%;
-    
     background-repeat: no-repeat;
    
   }
   
-  .perro {
-    background-image: url("../img/Personajes/luisa.jpg");
-    width: 470px;
-    height: 4000px;
-    top: 50%;
-    left: 50%;
-
+  
+  .perro {/*fixead el tamaño de luisa y la posicion*/
+    background-image: url("../img/Personajes/luisa-sin\ fondo-Photoroom.png");
+    width: 500px;
+    height: 800px;
+    position: absolute; /* Para que pueda posicionarse dentro de .escena */
+    top: 85%;
+    left: 40%;
+    transform: translate(-50%, -50%); /* Centrar correctamente */
+    display: none;
+    cursor: pointer;
+    background-size: contain; /* Ajusta la imagen dentro del elemento */
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
   
