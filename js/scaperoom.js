@@ -358,11 +358,11 @@ function mostrarRespuestaCentralP2(respuesta) {
     document.getElementById("calamardo").style.display = "block";
     document.getElementById("patricio").style.display = "block";
     document.getElementById("parrafo1").innerHTML = "Capitan: ¿Están listos, chicos? <br>" +
-      "Sí, capitán, estamos listos <br>" +
-      "No los escucho <br>" +
-      "¡Sí, capitán, estamos listos!" +
-      "Vive en una piña debajo del mar <br> " +
-      "los homofobicos ";
+      "-Sí, capitán <br>" +
+      "Capitan: No os oigoooo <br>" +
+      "-¡Sí, capitán! <br>" +
+      "Capitan: ¿Quien vive en una piña debajo del mar? <br> " +
+      "-Los del Titanic, Bin Laden y los del submarino que exploto";
     document.getElementById("parrafo2").style.display = "none";
     document.getElementById("reiniciar").style.display = "block";
     document.getElementById("respuestasContainerCentralP2").style.display = "none";
@@ -383,7 +383,7 @@ function mostrarCentralP4() {
 
   // Actualizar los mensajes
   document.getElementById("parrafo1").innerHTML = "Final";
-  document.getElementById("parrafo2").innerHTML = "Añañin: ¿Raúl apoya a Perro Sanche?";
+  document.getElementById("parrafo2").innerHTML = "Añañin: ¿Raúl votará a Perro Sanche?";
 
   // Mostrar el contenedor de respuestas y ocultar reinicio
   document.getElementById("respuestasContainerCentralP4").style.display = "flex";
@@ -402,8 +402,8 @@ function mostrarRespuestaCentralP4(respuesta) {
     // Cambia la imagen de fondo
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/casaperro.jpg")';
     document.getElementById("perro").style.display = "block";
-    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Ese perro no es un poco socialista.";
-    document.getElementById("parrafo2").innerHTML = "Enrique: La inflacion es de falangista... <br> Digo... woof woof";
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Ese perro... ¿No es un poco socialista?";
+    document.getElementById("parrafo2").innerHTML = "Enrique: Mi mujer me dijo que no dimitiera... <br> Digo... woof woof";
     document.getElementById("reiniciar").style.display = "none";
     // Mover al diablillo a una nueva posición
     let diablillo = document.getElementById("diablillo");
@@ -413,10 +413,10 @@ function mostrarRespuestaCentralP4(respuesta) {
   }  else if (respuesta === "B") { // Final feliz
     document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/casaperro.jpg")';
     document.getElementById("perro").style.display = "block";  // No se oculta por transformacionSanchez
-    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: Has conseguido encontrar a Enrique";
-    document.getElementById("parrafo2").innerHTML = "Enrique: <br><br> Voz misteriosa: Los perros no hablan";
+    document.getElementById("parrafo1").innerHTML = "Voz Misteriosa: ¡Felicidades! Has conseguido encontrar a Enrique";
+    document.getElementById("parrafo2").innerHTML = "Enrique: ... <br><br> Voz misteriosa: Los perros no hablan";
     
-    document.getElementById("perro").onclick = function(event) {//odio la tranformacion
+    document.getElementById("perro").onclick = function(event) {
       event.stopPropagation(); // Evita que el clic haga algo
   };
 }
@@ -431,8 +431,8 @@ function transformacionSanchez() {
   document.getElementById("perroSanchez").style.display = "block";
   document.getElementById("perro").style.display = "none";
   document.getElementById("principal").style.backgroundImage = 'url("../img/Escenarios/escenarioCentralP3.jpg")';
-  document.getElementById("parrafo1").innerHTML = "Voz misteriosa: ¡¡¡OH NO !!! Es PerroSanchez";
-  document.getElementById("parrafo2").innerHTML = "PerroSanchez: Votadme tengo loquitas a todas las Charos. ";
+  document.getElementById("parrafo1").innerHTML = "Voz misteriosa: ¡¡¡OH NO !!! Es PerroSanchez, no has conseguido recuperar a Enrique";
+  document.getElementById("parrafo2").innerHTML = "PerroSanchez: Votadme, tengo loquitas a todas las Charos. ";
   document.getElementById("reiniciar").style.display = "block";
   document.getElementById("diablillo").style.display = "none";
 }
